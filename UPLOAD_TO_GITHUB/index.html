@@ -1,0 +1,2761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kavindu Vishwa Godagampola — Cybersecurity Portfolio</title>
+<meta name="description" content="Cybersecurity undergraduate (NSBM × Victoria University) building real systems for real businesses: websites, ERP platforms, payroll automation and AI trading tools." />
+<meta name="author" content="Kavindu Vishwa Godagampola" />
+<link rel="canonical" href="https://kavinduvishwa27-blip.github.io/KAVINDU_PORTFOLIO/" />
+<meta name="theme-color" content="#060504" />
+
+<!-- Link previews (LinkedIn, WhatsApp, Facebook, X) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kavinduvishwa27-blip.github.io/KAVINDU_PORTFOLIO/" />
+<meta property="og:title" content="Kavindu Vishwa Godagampola — Cybersecurity Portfolio" />
+<meta property="og:description" content="Cybersecurity undergraduate (NSBM × Victoria University) building real systems for real businesses: websites, ERP platforms, payroll automation and AI trading tools." />
+<meta property="og:image" content="https://kavinduvishwa27-blip.github.io/KAVINDU_PORTFOLIO/assets/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Kavindu Vishwa Godagampola — Cybersecurity Portfolio" />
+<meta name="twitter:description" content="Cybersecurity undergraduate (NSBM × Victoria University) building real systems for real businesses: websites, ERP platforms, payroll automation and AI trading tools." />
+<meta name="twitter:image" content="https://kavinduvishwa27-blip.github.io/KAVINDU_PORTFOLIO/assets/og-image.jpg" />
+
+<!-- Tab icon: gold event-horizon ring -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060504'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23d4b06a' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23060504'/%3E%3Cellipse cx='32' cy='32' rx='27' ry='7' fill='none' stroke='%23e8894a' stroke-width='2.5' opacity='.85'/%3E%3C/svg%3E" />
+
+<!-- ============================================================
+     SWAP-IN INSTRUCTIONS (read me before going live)
+     1. PROFILE PHOTO: Replace the src of <img id="profile-photo">
+        with the path to your headshot (PNG/JPG).
+        Recommended: square, transparent or dark background,
+        ~600x600px. The page automatically blends it into space.
+     2. CV: Replace the src of <iframe id="cv-frame"> with a link
+        to your CV PDF. The PDF is shown in view-only mode
+        (no download / print toolbar) using #toolbar=0.
+     3. PROJECTS: Search for "PROJECT 1", "PROJECT 2", "PROJECT 3"
+        and edit titles, descriptions, tech tags, and links.
+     4. SOCIAL LINKS: Search for "SOCIAL LINKS" and update.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* =================== TOKENS =================== */
+  :root{
+    /* Warm palette — matched to the amber/ivory accretion disk in the bg video */
+    --void:        #060504;
+    --void-2:      #0c0a08;
+    --ink:         #110e0b;
+    --star:        #f4eee3;     /* warm ivory text */
+    --dim:         #b3a896;     /* warm grey secondary text */
+    --gold:        #d4b06a;     /* primary accent */
+    --plasma:      #f0d9a8;     /* pale champagne (gradient partner to gold) */
+    --magenta:     #c9744a;     /* copper */
+    --ember:       #e8894a;     /* accretion amber */
+    --glass:       rgba(244,238,227,0.04);
+    --glass-line:  rgba(244,238,227,0.12);
+    --display:     'Space Grotesk', sans-serif;
+    --mono:        'JetBrains Mono', monospace;
+    --body:        'Inter', sans-serif;
+    --r:           14px;
+  }
+
+  *{ box-sizing: border-box; margin: 0; padding: 0; }
+  html{ scroll-behavior: smooth; }
+  body{
+    background: var(--void);
+    color: var(--star);
+    font-family: var(--body);
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: none;
+    min-height: 100vh;
+  }
+
+  /* --- Text Readability Contrast Enhancement --- */
+  h1, h2, h3, h4, h5, h6, .hero-eyebrow, .section-num, .hero-scroll, .modal-meta, .modal-label, .meta-cell .k, .modal-fact .k, .project-num {
+    text-shadow: 0 2px 10px rgba(6,5,4, 0.95), 0 1px 3px rgba(6,5,4, 0.9);
+  }
+  
+  p, li, .v, .c-sub, .hero-sub, .modal-tagline, footer span, .modal-prose p {
+    text-shadow: 0 1px 6px rgba(6,5,4, 0.9), 0 1px 2px rgba(6,5,4, 0.9);
+  }
+
+
+  /* =================== CUSTOM CURSOR =================== */
+  .cursor{
+    position: fixed; top:0; left:0; width:32px; height:32px;
+    border:1px solid var(--gold); border-radius:50%;
+    pointer-events:none; z-index:20000;
+    transform: translate(-50%,-50%);
+    transition: width .25s, height .25s, border-color .25s, background .25s;
+    mix-blend-mode: difference;
+  }
+  .cursor-dot{
+    position: fixed; top:0; left:0; width:4px; height:4px;
+    background: var(--gold); border-radius:50%;
+    pointer-events:none; z-index:20001;
+    transform: translate(-50%,-50%);
+  }
+  .cursor.hover{ width:56px; height:56px; background: rgba(212,176,106,.1); }
+  @media (max-width: 768px){ body{ cursor:auto; } .cursor, .cursor-dot{ display:none; } }
+
+  #space-canvas{
+    position: fixed; inset: 0; z-index: 0;
+    pointer-events: none;
+  }
+
+  /* =================== BACKGROUND VIDEO EVENT HORIZON =================== */
+  #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    pointer-events: none;
+    opacity: 0.78;
+    filter: saturate(1.6) contrast(1.12) brightness(1.06);
+    /* transition for smooth parallax lag */
+    transition: transform 0.1s ease-out;
+  }
+
+  /* =================== COSMIC COLOUR LAYER ===================
+     A slowly turning ring of nebula colour blended over the video,
+     plus a lensing glow at the event horizon. Sits under all content. */
+  #cosmos{
+    position: fixed; inset: -25vmax; z-index: -1; pointer-events: none;
+    background:
+      conic-gradient(from 0deg at 50% 50%,
+        rgba(255,150,60,0.55), rgba(255,70,120,0.45), rgba(150,80,255,0.45),
+        rgba(40,170,255,0.40), rgba(40,220,190,0.35), rgba(255,200,90,0.50),
+        rgba(255,150,60,0.55));
+    mix-blend-mode: overlay;
+    opacity: 0.85;
+    filter: blur(60px);
+    animation: cosmos-turn 140s linear infinite;
+  }
+  #cosmos::after{
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 50% 46%, rgba(255,214,150,0.35) 0, rgba(255,140,80,0.18) 9vmax, transparent 22vmax),
+      radial-gradient(ellipse 40vmax 20vmax at 20% 28%, rgba(150,80,255,0.22), transparent 70%),
+      radial-gradient(ellipse 38vmax 18vmax at 82% 74%, rgba(40,190,255,0.18), transparent 70%),
+      radial-gradient(ellipse 30vmax 14vmax at 78% 20%, rgba(255,80,140,0.14), transparent 70%);
+    mix-blend-mode: screen;
+    animation: cosmos-breathe 18s ease-in-out infinite;
+  }
+  @keyframes cosmos-turn{ to{ transform: rotate(360deg); } }
+  @keyframes cosmos-breathe{ 50%{ opacity: .55; transform: scale(1.06); } }
+  @media (prefers-reduced-motion: reduce){ #cosmos, #cosmos::after{ animation: none; } }
+
+  /* =================== AUDIO HUD =================== */
+  #audio-hud {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    background: rgba(12,10,8,0.65);
+    border: 1px solid var(--glass-line);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: border-color 0.3s, transform 0.3s, background 0.3s;
+  }
+  #audio-hud:hover {
+    border-color: var(--gold);
+    transform: scale(1.05);
+    background: rgba(212,176,106,0.12);
+  }
+  #audio-hud svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--star);
+    transition: fill 0.3s;
+  }
+  #audio-hud.playing svg {
+    fill: var(--gold);
+  }
+  /* gradient overlay: deepens void at edges, fades canvas into page top + bottom,
+     and adds a soft warm halo that ties the disk colors into the rest of the page */
+  body::before{
+    content:""; position: fixed; inset: 0; z-index: 1; pointer-events: none;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 50%,
+        rgba(212,176,106,0.06) 0%,
+        transparent 50%),
+      radial-gradient(ellipse at 50% 45%,
+        transparent 0%,
+        rgba(6,5,4,0.45) 50%,
+        rgba(6,5,4,0.92) 100%),
+      linear-gradient(180deg,
+        rgba(6,5,4,0.55) 0%,
+        rgba(6,5,4,0) 12%,
+        rgba(6,5,4,0) 80%,
+        rgba(6,5,4,0.8) 100%);
+  }
+
+  /* veil over the video; opacity driven by --veil (0 on hero -> ~0.5 below) */
+  body::after{
+    content:""; position: fixed; inset: 0; z-index: 1; pointer-events: none;
+    background: rgba(6,5,4,var(--veil, 0));
+    transition: background .3s linear;
+  }
+
+  /* =================== LOADER =================== */
+  #loader{
+    position: fixed; inset: 0; z-index: 10000;
+    background: var(--void);
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    transition: opacity .8s ease, visibility .8s;
+  }
+  #loader.done{ opacity: 0; visibility: hidden; }
+  .loader-ring{
+    width: 80px; height: 80px;
+    border: 1px solid var(--glass-line);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+  }
+  @keyframes spin{ to{ transform: rotate(360deg); } }
+  #loader p{
+    margin-top: 24px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: .3em; color: var(--dim);
+    text-transform: uppercase;
+  }
+
+  /* =================== NAVIGATION =================== */
+  nav{
+    position: fixed; top: 24px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background: rgba(12,10,8,0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-line);
+    border-radius: 100px;
+    padding: 8px;
+    display: flex; gap: 4px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+  nav button{
+    background: transparent; border: none;
+    color: var(--dim);
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: .15em;
+    padding: 10px 18px;
+    border-radius: 100px;
+    cursor: none;
+    transition: color .3s, background .3s;
+    text-transform: uppercase;
+  }
+  nav button:hover{ color: var(--star); }
+  nav button.active{
+    color: var(--void);
+    background: var(--gold);
+  }
+  @media (max-width: 768px){
+    nav{ top: 12px; padding: 4px; gap: 2px; max-width: 95vw; overflow-x: auto; }
+    nav button{ padding: 8px 12px; font-size: 9px; }
+  }
+  /* phones: fit all six links without clipping "Contact" */
+  @media (max-width: 480px){
+    nav{ gap: 0; scrollbar-width: none; }
+    nav::-webkit-scrollbar{ display: none; }
+    nav button{ padding: 8px 7px; letter-spacing: .06em; flex: 0 0 auto; }
+  }
+
+  /* =================== SECTIONS =================== */
+  section{
+    position: relative; z-index: 2;
+    min-height: 100vh;
+    padding: 120px 8vw 80px;
+    display: flex; flex-direction: column;
+    justify-content: center;
+  }
+  .section-num{
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: .3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .8s, transform .8s;
+  }
+  .section-num.in{ opacity: 1; transform: translateY(0); }
+
+  /* =================== HERO =================== */
+  #home{
+    min-height: 100vh;
+    align-items: center; text-align: center;
+    justify-content: center;
+  }
+  /* soft dark pool behind the hero copy so it reads over the bright disk */
+  #home::before{
+    content:""; position: absolute; left: 50%; top: 50%; z-index: -1;
+    width: min(1100px, 95vw); height: 70vh;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse at center,
+      rgba(6,5,4,0.62) 0%, rgba(6,5,4,0.35) 45%, transparent 72%);
+    pointer-events: none;
+  }
+  .hero-eyebrow{
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: .4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    opacity: 0; animation: fadeUp 1s 1.5s forwards;
+  }
+  .hero-title{
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(48px, 9vw, 140px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
+  }
+  .hero-title span{
+    display: inline-block;
+    opacity: 0; transform: translateY(40px);
+    animation: fadeUp 1.2s forwards;
+  }
+  .hero-title span:nth-child(1){ animation-delay: 1.7s; }
+  .hero-title span:nth-child(2){ animation-delay: 1.85s;
+    background: linear-gradient(135deg, var(--gold), var(--plasma));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic; font-weight: 400;
+  }
+  .hero-sub{
+    font-family: var(--body); font-weight: 300;
+    font-size: clamp(14px, 1.4vw, 18px);
+    color: rgba(244,238,227,0.86);
+    max-width: 540px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+    opacity: 0; animation: fadeUp 1s 2.2s forwards;
+  }
+  .hero-scroll{
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: .3em; color: var(--dim);
+    text-transform: uppercase;
+    position: absolute; bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; animation: fadeUp 1s 2.6s forwards, bob 2s 3s infinite;
+  }
+  @keyframes fadeUp{ to{ opacity:1; transform: translateY(0); } }
+  @keyframes bob{ 50%{ transform: translateX(-50%) translateY(-8px); } }
+
+  /* =================== ABOUT =================== */
+  #about .about-grid{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px; align-items: center;
+    max-width: 1300px; margin: 0 auto;
+  }
+  @media (max-width: 900px){
+    #about .about-grid{ grid-template-columns: 1fr; gap: 48px; }
+  }
+  .portrait-wrap{
+    position: relative; aspect-ratio: 1;
+    max-width: 460px; margin: 0 auto;
+  }
+  .portrait-wrap::before{
+    content: ""; position: absolute; inset: -20%;
+    background: radial-gradient(circle at center,
+      rgba(232,137,74,0.22) 0%,
+      rgba(212,176,106,0.14) 30%,
+      transparent 70%);
+    filter: blur(40px);
+    animation: pulse 6s ease-in-out infinite;
+  }
+  @keyframes pulse{ 50%{ transform: scale(1.15); opacity: 0.7; } }
+  .portrait-wrap::after{
+    content: ""; position: absolute; inset: 0;
+    border-radius: 50%;
+    border: 1px solid var(--glass-line);
+    animation: rotate-ring 30s linear infinite;
+  }
+  @keyframes rotate-ring{ to{ transform: rotate(360deg); } }
+  #profile-photo{
+    position: relative;
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    /* The blend: photo lit by space, edges dissolved into the void */
+    mix-blend-mode: screen;
+    filter: contrast(1.05) brightness(0.95) saturate(0.9);
+    mask-image: radial-gradient(circle at center,
+      black 50%, transparent 78%);
+    -webkit-mask-image: radial-gradient(circle at center,
+      black 50%, transparent 78%);
+  }
+  .about-copy h2{
+    font-family: var(--display);
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 300;
+    line-height: 1.05; letter-spacing: -0.03em;
+    margin-bottom: 28px;
+  }
+  .about-copy h2 em{
+    color: var(--gold); font-style: italic; font-weight: 400;
+  }
+  .about-copy p{
+    font-size: 16px; line-height: 1.75;
+    color: var(--dim); margin-bottom: 20px;
+    max-width: 580px;
+  }
+  .about-meta{
+    margin-top: 32px;
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 16px; max-width: 480px;
+  }
+  .meta-cell{
+    padding: 16px;
+    border: 1px solid var(--glass-line);
+    border-radius: var(--r);
+    background: rgba(17,14,11,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .meta-cell .k{
+    font-family: var(--mono); font-size: 9px;
+    letter-spacing: .25em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .meta-cell .v{ font-size: 14px; color: var(--star); }
+
+  /* =================== PROJECTS =================== */
+  #projects .projects-head{
+    max-width: 1300px; margin: 0 auto 60px;
+  }
+  #projects h2{
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: -0.03em;
+  }
+  #projects h2 em{ font-style: italic; color: var(--gold); font-weight: 400; }
+  .projects-grid{
+    max-width: 1300px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    perspective: 1500px;
+  }
+  @media (max-width: 1000px){ .projects-grid{ grid-template-columns: 1fr; } }
+  .project-card{
+    position: relative;
+    background: linear-gradient(160deg,
+      rgba(17,14,11,0.92) 0%,
+      rgba(12,10,8,0.85) 100%);
+    border: 1px solid var(--glass-line);
+    border-radius: 20px;
+    padding: 32px 28px 28px;
+    min-height: 420px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform .4s cubic-bezier(.2,.8,.2,1),
+                border-color .4s, box-shadow .4s;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    cursor: none;
+  }
+  .project-card::before{
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at var(--mx,50%) var(--my,50%),
+      rgba(212,176,106,0.15), transparent 50%);
+    opacity: 0; transition: opacity .4s;
+    pointer-events: none;
+  }
+  .project-card:hover::before{ opacity: 1; }
+  .project-card:hover{
+    border-color: rgba(212,176,106,0.4);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5),
+                0 0 80px rgba(212,176,106,0.1);
+  }
+  .project-num{
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: .3em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 32px;
+  }
+  .project-card h3{
+    font-family: var(--display); font-weight: 400;
+    font-size: 28px; line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+  .project-card p{
+    font-size: 14px; line-height: 1.7;
+    color: var(--dim); margin-bottom: 24px;
+  }
+  .tech-tags{
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 28px;
+  }
+  .tag{
+    font-family: var(--mono); font-size: 10px;
+    padding: 5px 10px;
+    border: 1px solid var(--glass-line);
+    border-radius: 100px;
+    color: var(--dim);
+    letter-spacing: .1em;
+  }
+  .project-link{
+    position: absolute; bottom: 28px; left: 28px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: .2em; color: var(--gold);
+    text-transform: uppercase; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: gap .3s;
+  }
+  .project-link:hover{ gap: 14px; }
+  .project-link::after{
+    content: "→"; transition: transform .3s;
+  }
+
+  /* =================== SKILLS =================== */
+  #skills{ max-width: 1300px; margin: 0 auto; }
+  #skills h2{
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: -0.03em; margin-bottom: 60px;
+  }
+  #skills h2 em{ font-style: italic; color: var(--gold); font-weight: 400; }
+  .skills-grid{
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 900px){ .skills-grid{ grid-template-columns: repeat(2, 1fr); } }
+  .skill-cat{
+    padding: 28px 24px;
+    border: 1px solid var(--glass-line);
+    border-radius: var(--r);
+    background: rgba(17,14,11,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform .4s, border-color .4s;
+  }
+  .skill-cat:hover{
+    transform: translateY(-6px);
+    border-color: rgba(212,176,106,0.3);
+  }
+  .skill-cat h4{
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: .25em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 20px;
+  }
+  .skill-cat ul{ list-style: none; }
+  .skill-cat li{
+    font-size: 13px; color: var(--star);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(244,238,227,0.05);
+  }
+  .skill-cat li:last-child{ border-bottom: none; }
+
+  /* =================== CV =================== */
+  #cv{ max-width: 1100px; margin: 0 auto; }
+  #cv h2{
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: -0.03em; margin-bottom: 16px;
+  }
+  #cv h2 em{ font-style: italic; color: var(--gold); font-weight: 400; }
+  #cv .cv-note{
+    font-size: 14px; color: var(--dim);
+    margin-bottom: 40px; max-width: 560px;
+  }
+  .cv-frame-wrap{
+    position: relative;
+    border: 1px solid var(--glass-line);
+    border-radius: var(--r);
+    overflow: hidden;
+    background: var(--ink);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  }
+  .cv-toolbar{
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+    padding: 14px 18px;
+    background: rgba(6,5,4,0.9);
+    border-bottom: 1px solid var(--glass-line);
+    backdrop-filter: blur(10px);
+  }
+  .cv-badge{
+    background: rgba(212,176,106,0.12);
+    border: 1px solid rgba(212,176,106,0.3);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-family: var(--mono); font-size: 9px;
+    letter-spacing: .25em; color: var(--gold);
+    text-transform: uppercase;
+  }
+  .cv-controls{ display: flex; gap: 8px; align-items: center; }
+  .cv-btn{
+    background: rgba(244,238,227,0.05);
+    border: 1px solid var(--glass-line);
+    color: var(--star);
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: none;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .12em;
+    transition: background .25s, border-color .25s, color .25s;
+  }
+  .cv-btn:hover{
+    background: rgba(212,176,106,0.15);
+    border-color: rgba(212,176,106,0.5);
+    color: var(--gold);
+  }
+  a.cv-btn{ text-decoration: none; display: inline-flex; align-items: center; }
+  .cv-btn-primary{
+    background: var(--gold); color: var(--void);
+    border-color: var(--gold); font-weight: 700;
+  }
+  .cv-btn-primary:hover{ background: #e0c07a; color: var(--void); }
+  .cv-btn:disabled{ opacity: 0.3; cursor: not-allowed; }
+  .cv-page-counter{
+    font-family: var(--mono); font-size: 11px;
+    color: var(--dim); letter-spacing: .12em;
+    padding: 0 10px;
+  }
+  .cv-page-counter span{ color: var(--star); }
+  .cv-canvas-wrap{
+    position: relative;
+    background:
+      linear-gradient(180deg, #1a1611, #110e0b);
+    padding: 32px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 600px;
+    max-height: 75vh;
+    overflow: auto;
+  }
+  #cv-canvas{
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    background: #fff;
+    display: block;
+    -webkit-user-select: none; user-select: none;
+    pointer-events: none;
+  }
+  .cv-loading{
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    background: rgba(6,5,4,0.95);
+    z-index: 5;
+    transition: opacity .5s;
+  }
+  .cv-loading.done{ opacity: 0; pointer-events: none; }
+  .cv-loading p{
+    margin-top: 20px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: .25em; color: var(--dim);
+    text-transform: uppercase;
+  }
+  /* Fullscreen mode */
+  .cv-frame-wrap.fullscreen{
+    position: fixed; inset: 0;
+    z-index: 9998;
+    border-radius: 0;
+    border: none;
+    background: var(--void);
+  }
+  .cv-frame-wrap.fullscreen .cv-canvas-wrap{
+    max-height: calc(100vh - 65px);
+    height: calc(100vh - 65px);
+    padding: 40px 24px;
+  }
+  @media (max-width: 600px){
+    .cv-toolbar{ padding: 10px 12px; }
+    .cv-btn{ padding: 6px 10px; font-size: 10px; }
+    .cv-controls{ flex-wrap: wrap; row-gap: 8px; }
+    .cv-page-counter{ font-size: 10px; padding: 0 6px; }
+  }
+
+  /* =================== CONTACT =================== */
+  #contact{
+    text-align: center;
+    align-items: center; justify-content: center;
+  }
+  #contact .c-eyebrow{
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: .4em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 32px;
+  }
+  #contact h2{
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(40px, 7vw, 96px);
+    line-height: 1.05; letter-spacing: -0.04em;
+    margin-bottom: 16px;
+    max-width: 900px;
+  }
+  #contact h2 em{ font-style: italic; color: var(--gold); font-weight: 400; }
+  #contact .c-sub{
+    color: var(--dim); font-size: 16px;
+    max-width: 480px; margin: 0 auto 48px;
+    line-height: 1.7;
+  }
+  .c-email{
+    font-family: var(--display); font-size: clamp(20px, 3vw, 32px);
+    font-weight: 400; color: var(--star);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 6px;
+    transition: color .3s;
+  }
+  .c-email:hover{ color: var(--gold); }
+  .socials{
+    margin-top: 60px;
+    display: flex; gap: 32px; justify-content: center;
+  }
+  .socials a{
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: .2em; color: var(--dim);
+    text-decoration: none; text-transform: uppercase;
+    transition: color .3s;
+  }
+  .socials a:hover{ color: var(--gold); }
+
+  /* footer */
+  footer{
+    position: relative; z-index: 2;
+    padding: 40px 8vw;
+    border-top: 1px solid var(--glass-line);
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: .25em; color: var(--dim);
+    text-transform: uppercase;
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+  }
+
+  /* reveal on scroll */
+  .reveal{
+    opacity: 0; transform: translateY(40px);
+    transition: opacity .9s cubic-bezier(.2,.8,.2,1),
+                transform .9s cubic-bezier(.2,.8,.2,1);
+  }
+  .reveal.in{ opacity: 1; transform: translateY(0); }
+
+  /* prevent text overflow on small screens */
+  @media (max-width: 600px){
+    section{ padding: 100px 6vw 60px; }
+  }
+
+  /* respect reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  /* =================== PROJECT MODALS =================== */
+  .project-modal{
+    position: fixed; inset: 0;
+    z-index: 9000;
+    opacity: 0; visibility: hidden;
+    transform: translateY(30px);
+    transition: opacity .5s cubic-bezier(.2,.8,.2,1),
+                transform .5s cubic-bezier(.2,.8,.2,1),
+                visibility .5s;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    /* Solid background on the modal itself — prevents page bleed-through */
+    background: rgba(6,5,4,0.97);
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+  }
+  .project-modal.open{
+    opacity: 1; visibility: visible;
+    transform: translateY(0);
+  }
+  /* Backdrop is now decorative only — the modal bg above does the real work */
+  .modal-backdrop{
+    position: fixed; inset: 0;
+    background: transparent;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .modal-close{
+    position: fixed; top: 24px; right: 24px;
+    z-index: 9001;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: rgba(12,10,8,0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-line);
+    color: var(--star);
+    font-size: 22px; font-weight: 300; line-height: 1;
+    cursor: none;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .3s, border-color .3s, transform .3s, color .3s;
+  }
+  .modal-close:hover{
+    background: rgba(212,176,106,0.2);
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: rotate(90deg);
+  }
+  .modal-back{
+    position: fixed; top: 24px; left: 24px;
+    z-index: 9001;
+    background: rgba(12,10,8,0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-line);
+    border-radius: 100px;
+    padding: 10px 18px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: .15em; color: var(--star);
+    text-transform: uppercase;
+    cursor: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: background .3s, border-color .3s, gap .3s, color .3s;
+  }
+  .modal-back::before{ content:"←"; }
+  .modal-back:hover{
+    background: rgba(212,176,106,0.15);
+    border-color: rgba(212,176,106,0.5);
+    color: var(--gold);
+    gap: 14px;
+  }
+  .modal-content{
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 6vw 80px;
+  }
+  @media (max-width: 600px){
+    .modal-close{ top: 12px; right: 12px; width: 42px; height: 42px; }
+    .modal-back{ top: 12px; left: 12px; padding: 8px 14px; font-size: 10px; }
+    .modal-content{ padding: 90px 5vw 60px; }
+  }
+
+  /* Modal inner content */
+  .modal-meta{
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: .3em; color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .modal-content h1{
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(40px, 7vw, 88px);
+    line-height: 1.0; letter-spacing: -0.035em;
+    margin-bottom: 28px;
+    max-width: 900px;
+  }
+  .modal-content h1 em{
+    font-style: italic; color: var(--gold); font-weight: 400;
+  }
+  .modal-tagline{
+    font-size: clamp(16px, 1.6vw, 20px);
+    color: var(--dim); max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 56px;
+  }
+  .modal-section{ margin-bottom: 80px; }
+  .modal-label{
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: .3em; color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .modal-section h2{
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(26px, 3.6vw, 40px);
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+  .modal-prose p{
+    font-size: 16px; line-height: 1.8;
+    color: var(--dim); max-width: 720px;
+    margin-bottom: 18px;
+  }
+  .modal-prose strong{ color: var(--star); font-weight: 500; }
+
+  /* facts */
+  .modal-facts{
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin-bottom: 80px;
+    max-width: 900px;
+  }
+  @media (max-width: 700px){ .modal-facts{ grid-template-columns: repeat(2, 1fr); } }
+  .modal-fact{
+    padding: 20px;
+    border: 1px solid var(--glass-line);
+    border-radius: 12px;
+    background: rgba(17,14,11,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .modal-fact .k{
+    font-family: var(--mono); font-size: 9px;
+    letter-spacing: .25em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 8px;
+  }
+  .modal-fact .v{ font-size: 15px; color: var(--star); }
+
+  /* tag row */
+  .modal-live{
+    display: inline-block; margin: -8px 0 40px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .2em;
+    text-transform: uppercase; text-decoration: none;
+    color: var(--void); background: var(--gold);
+    padding: 12px 20px; border-radius: 100px;
+    transition: background .3s;
+  }
+  .modal-live:hover{ background: var(--plasma); }
+  .modal-live.alt{ background: transparent; color: var(--gold); border: 1px solid rgba(212,176,106,0.5); margin-left: 8px; }
+  .modal-live.alt:hover{ background: rgba(212,176,106,0.12); }
+  .modal-tag-row{ display: flex; flex-wrap: wrap; gap: 8px; }
+  .modal-tag{
+    font-family: var(--mono); font-size: 11px;
+    padding: 8px 14px;
+    border: 1px solid var(--glass-line);
+    border-radius: 100px;
+    color: var(--star);
+    background: rgba(244,238,227,0.03);
+    letter-spacing: .08em;
+  }
+
+  /* feature cards */
+  .modal-features{
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 700px){ .modal-features{ grid-template-columns: 1fr; } }
+  .modal-feature{
+    padding: 28px 24px;
+    border: 1px solid var(--glass-line);
+    border-radius: 14px;
+    background: rgba(17,14,11,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform .4s, border-color .4s;
+  }
+  .modal-feature:hover{
+    transform: translateY(-4px);
+    border-color: rgba(212,176,106,0.3);
+  }
+  .modal-feature .num{
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: .25em; color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .modal-feature h3{
+    font-family: var(--display); font-weight: 500;
+    font-size: 20px; margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .modal-feature p{
+    font-size: 14px; color: var(--dim);
+    line-height: 1.7;
+  }
+
+  /* gallery */
+  .modal-gallery{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 200px;
+    gap: 14px;
+  }
+  @media (max-width: 900px){ .modal-gallery{ grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; } }
+  .gallery-item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid var(--glass-line);
+    background: var(--ink);
+  }
+  .gallery-item.wide{ grid-column: span 4; }
+  .gallery-item.tall{ grid-row: span 2; grid-column: span 2; }
+  .gallery-item.normal{ grid-column: span 2; }
+  @media (max-width: 900px){
+    .gallery-item.wide, .gallery-item.tall, .gallery-item.normal{
+      grid-column: span 1; grid-row: span 1;
+    }
+  }
+  .gallery-img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+  .gallery-item:hover .gallery-img{ transform: scale(1.05); }
+  .gallery-item::after{
+    content: attr(data-caption);
+    position: absolute; left: 16px; bottom: 16px; right: 16px;
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: .15em; color: var(--star);
+    text-transform: uppercase;
+    background: rgba(6,5,4,0.75);
+    backdrop-filter: blur(8px);
+    padding: 6px 10px;
+    border-radius: 6px;
+    opacity: 0; transform: translateY(8px);
+    transition: opacity .4s, transform .4s;
+    pointer-events: none;
+  }
+  .gallery-item:hover::after{ opacity: 1; transform: translateY(0); }
+
+  /* modal end */
+  .modal-end{
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid var(--glass-line);
+    display: flex; justify-content: space-between;
+    align-items: center; gap: 20px; flex-wrap: wrap;
+  }
+  .modal-end-back{
+    font-family: var(--display);
+    font-size: 18px; color: var(--star);
+    cursor: none; background: none; border: none;
+    display: inline-flex; align-items: center; gap: 12px;
+    transition: gap .3s, color .3s;
+  }
+  .modal-end-back::before{ content:"←"; color: var(--gold); }
+  .modal-end-back:hover{ gap: 18px; color: var(--gold); }
+  .modal-end-tag{
+    font-family: var(--mono); font-size: 10px;
+    color: var(--dim); letter-spacing: .25em;
+    text-transform: uppercase;
+  }
+
+  /* scroll lock for body when a modal is open */
+  body.modal-open{ overflow: hidden; }
+
+  /* Gallery Cursor */
+  .gallery-item {
+    cursor: zoom-in;
+  }
+
+  /* Lightbox Overlay */
+  .lightbox-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(6,5,4, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 12000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.4s;
+  }
+  .lightbox-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .lightbox-overlay.open .lightbox-content {
+    transform: scale(1);
+  }
+  .lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 12px;
+    border: 1px solid var(--glass-line);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+    object-fit: contain;
+    cursor: pointer;
+  }
+  #lightbox-caption {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--star);
+    text-transform: uppercase;
+    background: rgba(12,10,8, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--glass-line);
+    text-align: center;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 30px; right: 30px;
+    background: rgba(12,10,8, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-line);
+    border-radius: 50%;
+    width: 48px; height: 48px;
+    color: var(--star);
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s, transform 0.3s, color 0.3s;
+    line-height: 1;
+    z-index: 12010;
+  }
+  .lightbox-close:hover {
+    background: rgba(212, 176, 106, 0.2);
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: rotate(90deg);
+  }
+  .lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(12,10,8, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-line);
+    border-radius: 50%;
+    width: 50px; height: 50px;
+    color: var(--dim);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+    z-index: 12010;
+  }
+  .lightbox-prev:hover, .lightbox-next:hover {
+    background: rgba(212, 176, 106, 0.2);
+    color: var(--star);
+    border-color: var(--gold);
+  }
+  .lightbox-prev { left: 40px; }
+  .lightbox-next { right: 40px; }
+  .lightbox-prev:hover { transform: translateY(-50%) scale(1.05); }
+  .lightbox-next:hover { transform: translateY(-50%) scale(1.05); }
+
+  @media (max-width: 900px) {
+    .lightbox-prev, .lightbox-next {
+      width: 44px; height: 44px;
+      font-size: 16px;
+    }
+    .lightbox-prev { left: 16px; }
+    .lightbox-next { right: 16px; }
+    .lightbox-close { top: 20px; right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div id="loader">
+  <div class="loader-ring"></div>
+  <p>Initializing event horizon…</p>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor"></div>
+<div class="cursor-dot"></div>
+
+<!-- ============ BLACK HOLE / STARS CANVAS ============ -->
+<canvas id="space-canvas"></canvas>
+
+<!-- ============ BACKGROUND VIDEO EVENT HORIZON ============ -->
+<video id="bg-video" autoplay muted loop playsinline preload="none" poster="assets/bg-poster.jpg" data-src="bg-video.mp4"></video>
+<script>
+  // Start the 4.6 MB background video only after the page itself has loaded,
+  // and skip it entirely when the visitor has asked to save data.
+  window.addEventListener('load', () => {
+    const v = document.getElementById('bg-video');
+    const saveData = navigator.connection && navigator.connection.saveData;
+    if (!v || saveData) return;
+    v.src = v.dataset.src;
+    v.play().catch(() => {});
+  });
+</script>
+<div id="cosmos" aria-hidden="true"></div>
+
+<!-- ============ BACKGROUND AUDIO SYSTEM ============ -->
+<audio id="bg-audio" loop preload="none" src="bg-audio.mp4"></audio>
+
+<!-- ============ AUDIO HUD ============ -->
+<button id="audio-hud" aria-label="Toggle Audio">
+  <svg id="audio-icon" viewBox="0 0 24 24">
+    <!-- Muted icon initially -->
+    <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM12 4L9.91 6.09 12 8.18V4zm-8.62.88L2.5 6.01 7.49 11H3v2h4l4 4v-4.18l2.92 2.92c-.37.28-.78.51-1.22.65v2.03c1 .22 1.91-.25 2.62-.77l3.19 3.19 1.13-1.13L3.38 4.88z"/>
+  </svg>
+</button>
+
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <button data-target="home" class="active">Home</button>
+  <button data-target="about">About</button>
+  <button data-target="projects">Projects</button>
+  <button data-target="skills">Skills</button>
+  <button data-target="cv">CV</button>
+  <button data-target="contact">Contact</button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="home">
+  <div class="hero-eyebrow">// Cyber Security Undergraduate · NSBM × Victoria University</div>
+  <h1 class="hero-title">
+    <span>Kavindu Vishwa</span><br/>
+    <span>Godagampola</span>
+  </h1>
+  <p class="hero-sub">
+    Cybersecurity student building real systems for real businesses.
+    Business websites, ERP systems, payroll automation and AI trading
+    agents — work shaped by curiosity and discipline.
+  </p>
+  <div class="hero-scroll">Scroll ↓ to descend</div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="section-num reveal">// 01 — About</div>
+  <div class="about-grid">
+    <div class="portrait-wrap reveal">
+      <!-- PROFILE PHOTO: replace src with your own image -->
+      <img id="profile-photo"
+           src="assets/img/profile.jpg"
+           alt="Profile" />
+    </div>
+    <div class="about-copy reveal">
+      <h2>Building things<br/>that <em>matter</em>.</h2>
+      <p>
+        I'm a Cyber Security undergraduate at NSBM Green University,
+        pursuing a degree awarded by Victoria University, Melbourne.
+        I'm in my second year of the BSc (Hons) in Information
+        Technology — Cyber Security.
+      </p>
+      <p>
+        Beyond coursework I build real systems for real businesses:
+        a wholesale lighting website with its own ERP, an online
+        college with a live admin panel, a brand and launch plan for an
+        agri business, POS and payroll automation, and an AI-driven
+        trading-signal platform. I care about systems that
+        are fast, reliable, and resistant to the obvious mistakes.
+      </p>
+      <div class="about-meta">
+        <div class="meta-cell">
+          <div class="k">Focus</div>
+          <div class="v">Cybersecurity · Full-Stack</div>
+        </div>
+        <div class="meta-cell">
+          <div class="k">Status</div>
+          <div class="v">Open to internships</div>
+        </div>
+        <div class="meta-cell">
+          <div class="k">Location</div>
+          <div class="v">Udugampola, Sri Lanka</div>
+        </div>
+        <div class="meta-cell">
+          <div class="k">Languages</div>
+          <div class="v">Python · Java · JS · SQL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="section-num reveal">// 02 — Selected Work</div>
+  <div class="projects-head reveal">
+    <h2>Six projects.<br/>One <em>discipline</em>.</h2>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 01 -->
+    <article class="project-card reveal" data-tilt data-modal="modal-emmark">
+      <div class="project-num">Project 01 · 2026</div>
+      <h3>EMMARK Lighting — Website &amp; ERP</h3>
+      <p>
+        Wholesale LED lighting website with a live catalogue, quote
+        builder and lighting calculator, backed by a full ERP for
+        quotations, invoices, inventory and China → Sri Lanka shipments.
+      </p>
+      <div class="tech-tags">
+        <span class="tag">JavaScript</span>
+        <span class="tag">Three.js</span>
+        <span class="tag">Cloudflare Workers</span>
+        <span class="tag">ERP</span>
+      </div>
+      <a class="project-link" href="#" data-modal-link="modal-emmark">Case study</a>
+    </article>
+
+    <!-- PROJECT 02 -->
+    <article class="project-card reveal" data-tilt data-modal="modal-freelancer">
+      <div class="project-num">Project 02 · 2026</div>
+      <h3>Freelancer College — Website &amp; Admin</h3>
+      <p>
+        Course website for a Sinhala-language freelancing school, with
+        cohort enrolment, online checkout and an admin panel that edits
+        live content, leads and payments without a rebuild.
+      </p>
+      <div class="tech-tags">
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Cloudflare Pages</span>
+        <span class="tag">D1</span>
+      </div>
+      <a class="project-link" href="#" data-modal-link="modal-freelancer">Case study</a>
+    </article>
+
+    <!-- PROJECT 03 -->
+    <article class="project-card reveal" data-tilt data-modal="modal-wilpotha">
+      <div class="project-num">Project 03 · 2026</div>
+      <h3>Wilpotha Agri — Brand &amp; Digital Launch</h3>
+      <p>
+        Modernization plan, brand system and website build spec for a
+        Sri Lankan cashew and peanut supplier — taking it from commodity
+        sales to a branded business selling online.
+      </p>
+      <div class="tech-tags">
+        <span class="tag">Brand System</span>
+        <span class="tag">Web Spec</span>
+        <span class="tag">Strategy</span>
+        <span class="tag">Launch Plan</span>
+      </div>
+      <a class="project-link" href="#" data-modal-link="modal-wilpotha">Case study</a>
+    </article>
+    <!-- PROJECT 4 -->
+    <article class="project-card reveal" data-tilt data-modal="modal-pos">
+      <div class="project-num">Project 04 · 2026</div>
+      <h3>Automated POS &amp; Payroll System</h3>
+      <p>
+        End-to-end point-of-sale and payroll system built for
+        S&amp;K House. Handles daily transactions and auto-generates
+        employee paysheets, replacing a manual workflow that ate
+        hours every cycle.
+      </p>
+      <div class="tech-tags">
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Automation</span>
+      </div>
+      <a class="project-link" href="#" data-modal-link="modal-pos">Case study</a>
+    </article>
+
+    <!-- PROJECT 5 -->
+    <article class="project-card reveal" data-tilt data-modal="modal-trading">
+      <div class="project-num">Project 05 · 2026</div>
+      <h3>AI Trading Signal Platform</h3>
+      <p>
+        Technical-analysis web app for crypto and forex markets.
+        An AI agent ingests live news and runs eight strategies to
+        emit trade signals — validated across 20+ rounds of live
+        progress tracking.
+      </p>
+      <div class="tech-tags">
+        <span class="tag">Python</span>
+        <span class="tag">AI Agent</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">News API</span>
+      </div>
+      <a class="project-link" href="#" data-modal-link="modal-trading">Case study</a>
+    </article>
+
+    <!-- PROJECT 6 -->
+    <article class="project-card reveal" data-tilt data-modal="modal-coofandy">
+      <div class="project-num">Project 06 · 2024</div>
+      <h3>COOFANDY E-Commerce Platform</h3>
+      <p>
+        Rebuilt and optimized the company's e-commerce site for
+        speed, security, and responsive UX. Collaborated with the
+        team to lift platform usability and keep the store fully
+        functional under real traffic.
+      </p>
+      <div class="tech-tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">E-Commerce</span>
+      </div>
+      <a class="project-link" href="#" data-modal-link="modal-coofandy">Case study</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="section-num reveal">// 03 — Arsenal</div>
+  <h2 class="reveal">Tools of the <em>trade</em>.</h2>
+
+  <div class="skills-grid">
+    <div class="skill-cat reveal">
+      <h4>Languages</h4>
+      <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>HTML &amp; CSS</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+    <div class="skill-cat reveal">
+      <h4>Build</h4>
+      <ul>
+        <li>Web development</li>
+        <li>ERP &amp; admin systems</li>
+        <li>Cloudflare Workers · D1</li>
+        <li>POS &amp; payroll systems</li>
+        <li>AI agents · automation</li>
+        <li>System setup &amp; support</li>
+        <li>Brand &amp; launch strategy</li>
+      </ul>
+    </div>
+    <div class="skill-cat reveal">
+      <h4>Studying</h4>
+      <ul>
+        <li>Network security</li>
+        <li>Threat mitigation</li>
+        <li>Digital system protection</li>
+        <li>Secure web development</li>
+        <li>Emerging threats</li>
+      </ul>
+    </div>
+    <div class="skill-cat reveal">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Project management</li>
+        <li>Leadership · teamwork</li>
+        <li>Crisis management</li>
+        <li>Creative thinking</li>
+        <li>Works under pressure</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CV ============ -->
+<section id="cv">
+  <div class="section-num reveal">// 04 — Curriculum Vitae</div>
+  <h2 class="reveal">Curriculum <em>Vitae</em>.</h2>
+
+  <div class="cv-frame-wrap reveal" id="cv-frame-wrap">
+    <div class="cv-toolbar">
+      <span class="cv-badge">PDF · 2 pages</span>
+      <div class="cv-controls">
+        <button class="cv-btn" id="cv-prev" aria-label="Previous page">&larr;</button>
+        <span class="cv-page-counter">
+          <span id="cv-page">1</span>&nbsp;/&nbsp;<span id="cv-total">…</span>
+        </span>
+        <button class="cv-btn" id="cv-next" aria-label="Next page">&rarr;</button>
+        <button class="cv-btn" id="cv-full">⛶&nbsp;Fullscreen</button>
+        <a class="cv-btn cv-btn-primary" id="cv-download" href="assets/cv.pdf?v=2" download="Kavindu_Vishwa_Godagampola_CV.pdf">↓&nbsp;Download</a>
+      </div>
+    </div>
+    <div class="cv-canvas-wrap" id="cv-canvas-wrap">
+      <div class="cv-loading" id="cv-loading">
+        <div class="loader-ring"></div>
+        <p>Decoding CV…</p>
+      </div>
+      <canvas id="cv-canvas"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="c-eyebrow reveal">// 05 — Transmit</div>
+  <h2 class="reveal">Let's build<br/>something <em>resilient</em>.</h2>
+  <p class="c-sub reveal">
+    Open to internships, collaborations, and CTF teams.
+    The fastest way to reach me is below.
+  </p>
+  <a class="c-email reveal" href="mailto:kavinduvishwa28@gmail.com">kavinduvishwa28@gmail.com</a>
+
+  <!-- SOCIAL LINKS -->
+  <div class="socials reveal">
+    <a href="https://www.linkedin.com/in/kavindu-vishwa-godagampola-aaa657324" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/kavinduvishwa27-blip" target="_blank" rel="noopener">GitHub</a>
+    <a href="tel:+94777453318">+94 77 745 3318</a>
+  </div>
+</section>
+
+<footer>
+  <span>© <span id="year"></span> Kavindu Vishwa Godagampola</span>
+  <span>Built for the void · v1.0</span>
+</footer>
+
+<!-- ============================================================
+                            SCRIPTS
+============================================================ -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+  }
+}
+</script>
+
+<script type="module">
+  import * as THREE from 'three';
+
+  /* ==================================================
+     KVG DEEP SPACE COMMAND CENTER — THREE.JS ENGINE
+     Simulates 4000 accretion disk particles, 800 polar jets,
+     5000 stars, and 4 drifting nebula cloud layers.
+  ================================================== */
+  const canvas = document.getElementById('space-canvas');
+  if (canvas) {
+    const scene    = new THREE.Scene();
+    const camera   = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 8000);
+    camera.position.set(0, 60, 350);
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(0x000000, 0);
+
+    // ─── JET GROUP ───
+    const bhGroup = new THREE.Group();
+    scene.add(bhGroup);
+
+    // ─── POLAR JETS ───
+    const jetCount = 800;
+    const jetPos = new Float32Array(jetCount * 3);
+    const jetCol = new Float32Array(jetCount * 3);
+    for (let i = 0; i < jetCount; i++) {
+      const spread = Math.random() * 12;
+      const dist   = 60 + Math.random() * 400;
+      const sign   = i < jetCount / 2 ? 1 : -1;
+      jetPos[i * 3]   = (Math.random() - 0.5) * spread;
+      jetPos[i * 3 + 1] = sign * dist;
+      jetPos[i * 3 + 2] = (Math.random() - 0.5) * spread;
+      
+      const f = dist / 460;
+      jetCol[i * 3]   = 1;
+      jetCol[i * 3 + 1] = 0.82 + (1 - f) * 0.15;
+      jetCol[i * 3 + 2] = 0.55 + (1 - f) * 0.35;
+    }
+    const jetGeo = new THREE.BufferGeometry();
+    jetGeo.setAttribute('position', new THREE.BufferAttribute(jetPos, 3));
+    jetGeo.setAttribute('color',    new THREE.BufferAttribute(jetCol, 3));
+    const jetMat = new THREE.PointsMaterial({
+      size: 1.5, vertexColors: true, transparent: true, opacity: 0.5,
+      sizeAttenuation: true, blending: THREE.AdditiveBlending, depthWrite: false
+    });
+    const jets = new THREE.Points(jetGeo, jetMat);
+    bhGroup.add(jets);
+
+    // ─── ORBITAL ACCRETION PARTICLES ───
+    const PCOUNT = 4000;
+    const pPos  = new Float32Array(PCOUNT * 3);
+    const pCol  = new Float32Array(PCOUNT * 3);
+    const pData = [];
+
+    for (let i = 0; i < PCOUNT; i++) {
+      const angle  = Math.random() * Math.PI * 2;
+      const radius = 65 + Math.random() * 200;
+      const heightFactor = radius < 120 ? 0.08 : 0.25;
+
+      pPos[i * 3]   = Math.cos(angle) * radius;
+      pPos[i * 3 + 1] = (Math.random() - 0.5) * radius * heightFactor;
+      pPos[i * 3 + 2] = Math.sin(angle) * radius;
+
+      pData.push({ baseAngle: angle, baseRadius: radius, speed: 0.0003 + Math.random() * 0.0004, vertPhase: Math.random() * Math.PI * 2 });
+
+      const t = (radius - 65) / 200;
+      if (t < 0.25) {
+        pCol[i * 3] = 1; pCol[i * 3 + 1] = 0.85; pCol[i * 3 + 2] = 0.6;
+      } else if (t < 0.5) {
+        pCol[i * 3] = 1; pCol[i * 3 + 1] = 0.5; pCol[i * 3 + 2] = 0.25;
+      } else if (t < 0.75) {
+        pCol[i * 3] = 1; pCol[i * 3 + 1] = 0.35; pCol[i * 3 + 2] = 0.6;
+      } else {
+        pCol[i * 3] = 0.55; pCol[i * 3 + 1] = 0.4; pCol[i * 3 + 2] = 1;
+      }
+    }
+
+    const pGeo = new THREE.BufferGeometry();
+    pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+    pGeo.setAttribute('color',    new THREE.BufferAttribute(pCol, 3));
+    const pMat = new THREE.PointsMaterial({
+      size: 1.6, vertexColors: true, transparent: true, opacity: 0.80,
+      sizeAttenuation: true, blending: THREE.AdditiveBlending, depthWrite: false
+    });
+    const particles = new THREE.Points(pGeo, pMat);
+    scene.add(particles);
+
+    // ─── STAR FIELD ───
+    const SCOUNT = 5000;
+    const sPos = new Float32Array(SCOUNT * 3);
+    const sCol = new Float32Array(SCOUNT * 3);
+    for (let i = 0; i < SCOUNT; i++) {
+      sPos[i * 3]   = (Math.random() - 0.5) * 6000;
+      sPos[i * 3 + 1] = (Math.random() - 0.5) * 6000;
+      sPos[i * 3 + 2] = (Math.random() - 0.5) * 6000;
+      const c = 0.6 + Math.random() * 0.4;
+      sCol[i * 3] = c; sCol[i * 3 + 1] = c * 0.97; sCol[i * 3 + 2] = c * 0.9;
+    }
+    const sGeo = new THREE.BufferGeometry();
+    sGeo.setAttribute('position', new THREE.BufferAttribute(sPos, 3));
+    sGeo.setAttribute('color',    new THREE.BufferAttribute(sCol, 3));
+    const sMat = new THREE.PointsMaterial({ size: 0.7, vertexColors: true, transparent: true, opacity: 0.5 });
+    const starField = new THREE.Points(sGeo, sMat);
+    scene.add(starField);
+
+    // ─── NEBULA CLOUDS ───
+    const nebulaDefs = [
+      { color: new THREE.Color(0xFFB347), offset: 0 },
+      { color: new THREE.Color(0xFF4F8B), offset: Math.PI / 2 },
+      { color: new THREE.Color(0x8A5CFF), offset: Math.PI },
+      { color: new THREE.Color(0x2EC5FF), offset: Math.PI * 1.5 }
+    ];
+    const nebulaClouds = nebulaDefs.map(nd => {
+      const nGeo = new THREE.BufferGeometry();
+      const nCount = 1200;
+      const nPos = new Float32Array(nCount * 3);
+      const nCol = new Float32Array(nCount * 3);
+      for (let i = 0; i < nCount; i++) {
+        const a = Math.random() * Math.PI * 2;
+        const d = 500 + Math.random() * 1500;
+        nPos[i * 3]   = Math.cos(a + nd.offset) * d;
+        nPos[i * 3 + 1] = (Math.random() - 0.5) * 800;
+        nPos[i * 3 + 2] = Math.sin(a + nd.offset) * d;
+        nCol[i * 3] = nd.color.r; nCol[i * 3 + 1] = nd.color.g; nCol[i * 3 + 2] = nd.color.b;
+      }
+      nGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3));
+      nGeo.setAttribute('color',    new THREE.BufferAttribute(nCol, 3));
+      const nMat = new THREE.PointsMaterial({
+        size: 2.8, vertexColors: true, transparent: true, opacity: 0.24,
+        sizeAttenuation: true, blending: THREE.AdditiveBlending, depthWrite: false
+      });
+      const cloud = new THREE.Points(nGeo, nMat);
+      scene.add(cloud);
+      return cloud;
+    });
+
+    // ─── INTERACTION STATE & VIDEO PARALLAX ───
+    let targetCamZ = 350, mouseX = 0, mouseY = 0, scrollPercent = 0;
+    let videoX = 0, videoY = 0, videoScale = 1.05;
+    const videoEl = document.getElementById('bg-video');
+    const clock = new THREE.Clock();
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    window.addEventListener('scroll', () => {
+      const h = document.body.scrollHeight - window.innerHeight;
+      scrollPercent = h > 0 ? window.scrollY / h : 0;
+      targetCamZ = 350 - scrollPercent * 200;
+    }, { passive: true });
+
+    window.addEventListener('mousemove', e => {
+      mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+    });
+
+    window.addEventListener('touchmove', e => {
+      if (e.touches.length) {
+        mouseX = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+      }
+    }, { passive: true });
+
+    // ─── ANIMATION LOOP ───
+    function loop() {
+      requestAnimationFrame(loop);
+      const t = clock.getElapsedTime();
+
+      // ── Smooth video translation & scaling (parallax & zoom) ──
+      const targetVideoX = mouseX * -25;
+      const targetVideoY = mouseY * -20;
+      // slow "falling in" pulse (60s cycle) + deeper as you scroll
+      const drift = 0.5 - 0.5 * Math.cos(t * (Math.PI * 2 / 60));
+      const targetVideoScale = 1.08 + drift * 0.14 + scrollPercent * 0.28;
+
+      videoX += (targetVideoX - videoX) * 0.05;
+      videoY += (targetVideoY - videoY) * 0.05;
+      videoScale += (targetVideoScale - videoScale) * 0.05;
+
+      if (videoEl) {
+        videoEl.style.transform = `translate(${videoX}px, ${videoY}px) scale(${videoScale}) rotate(${Math.sin(t * 0.02) * 2 + scrollPercent * 6}deg)`;
+      }
+
+      // ── Very slow, majestic rotation of the jets ──
+      bhGroup.rotation.y += 0.00015;
+
+      // ── Gentle wobble/precession on the jets ──
+      bhGroup.rotation.x = Math.sin(t * 0.08) * 0.06;
+      bhGroup.rotation.z = Math.cos(t * 0.06) * 0.03;
+
+      // ── Polar jet animation — particles stream outward ──
+      const jp = jets.geometry.attributes.position.array;
+      for (let i = 0; i < jetCount; i++) {
+        const sign = i < jetCount / 2 ? 1 : -1;
+        jp[i * 3 + 1] += sign * 0.15;
+        if (Math.abs(jp[i * 3 + 1]) > 460) {
+          jp[i * 3]   = (Math.random() - 0.5) * 8;
+          jp[i * 3 + 1] = sign * (60 + Math.random() * 30);
+          jp[i * 3 + 2] = (Math.random() - 0.5) * 8;
+        }
+        const dist = Math.abs(jp[i * 3 + 1]);
+        jp[i * 3]   += (Math.random() - 0.5) * 0.05;
+        jp[i * 3 + 2] += (Math.random() - 0.5) * 0.05;
+      }
+      jets.geometry.attributes.position.needsUpdate = true;
+
+      // ── Orbital particles — Keplerian orbits (faster close, slower far) ──
+      for (let i = 0; i < PCOUNT; i++) {
+        const d = pData[i];
+        const keplerSpeed = d.speed * Math.pow(100 / d.baseRadius, 1.2);
+        d.baseAngle += keplerSpeed;
+        d.baseRadius = Math.max(66, d.baseRadius - 0.003);
+
+        const heightFactor = d.baseRadius < 120 ? 0.06 : 0.18;
+        pPos[i * 3]   = Math.cos(d.baseAngle) * d.baseRadius;
+        pPos[i * 3 + 2] = Math.sin(d.baseAngle) * d.baseRadius;
+        pPos[i * 3 + 1] = Math.sin(t * 0.15 + d.vertPhase) * d.baseRadius * heightFactor;
+
+        if (d.baseRadius <= 67) {
+          d.baseAngle  = Math.random() * Math.PI * 2;
+          d.baseRadius = 150 + Math.random() * 120;
+          d.vertPhase  = Math.random() * Math.PI * 2;
+        }
+      }
+      pGeo.attributes.position.needsUpdate = true;
+
+      // ── Star field — very very slow rotation for depth ──
+      starField.rotation.y += 0.000008;
+      // stars stream toward the viewer; faster the deeper you scroll
+      const sp = sGeo.attributes.position.array;
+      const warp = 0.6 + scrollPercent * 2.4;
+      for (let i = 0; i < SCOUNT; i++) {
+        sp[i * 3 + 2] += warp;
+        if (sp[i * 3 + 2] > 3000) sp[i * 3 + 2] -= 6000;
+      }
+      sGeo.attributes.position.needsUpdate = true;
+
+      // ── Nebula clouds — drift gently ──
+      nebulaClouds.forEach((c, i) => {
+        c.rotation.y += 0.00002 * (i + 1);
+      });
+
+      // ── Camera — smooth parallax + gentle orbit ──
+      const camOrbitX = Math.sin(t * 0.03) * 20;
+      const camOrbitY = 50 + Math.cos(t * 0.025) * 15;
+      camera.position.x += ((camOrbitX + mouseX * 40) - camera.position.x) * 0.015;
+      camera.position.y += ((camOrbitY + mouseY * 30) - camera.position.y) * 0.015;
+      const camDrift = Math.sin(t * 0.05) * 25;
+      camera.position.z += ((targetCamZ - camDrift) - camera.position.z) * 0.04;
+      camera.lookAt(0, 0, 0);
+
+      renderer.render(scene, camera);
+    }
+    loop();
+  }
+
+  /* ============ AUDIO HUD CONTROLS ============ */
+  const audio = document.getElementById('bg-audio');
+  const hud = document.getElementById('audio-hud');
+  const icon = document.getElementById('audio-icon');
+  let audioPlaying = false;
+
+  if (hud && audio && icon) {
+    hud.addEventListener('click', () => {
+      toggleAudio();
+    });
+
+  }
+
+  function startAudio() {
+    audio.volume = 0.55;
+    audio.play().then(() => {
+      audioPlaying = true;
+      hud.classList.add('playing');
+      icon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+    }).catch(err => {
+      console.warn("Autoplay audio blocked or failed:", err);
+    });
+  }
+
+  function toggleAudio() {
+    if (audioPlaying) {
+      audio.pause();
+      audioPlaying = false;
+      hud.classList.remove('playing');
+      icon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM12 4L9.91 6.09 12 8.18V4zm-8.62.88L2.5 6.01 7.49 11H3v2h4l4 4v-4.18l2.92 2.92c-.37.28-.78.51-1.22.65v2.03c1 .22 1.91-.25 2.62-.77l3.19 3.19 1.13-1.13L3.38 4.88z"/>';
+    } else {
+      audio.volume = 0.55;
+      audio.play().then(() => {
+        audioPlaying = true;
+        hud.classList.add('playing');
+        icon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+      });
+    }
+  }
+
+  /* ============ LOADER OFF ============ */
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('loader');
+      if (loader) loader.classList.add('done');
+    }, 800);
+  });
+</script>
+
+<script>
+  /* ============ NAV ============ */
+  const buttons = document.querySelectorAll('nav button');
+  buttons.forEach(b => {
+    b.addEventListener('click', () => {
+      const target = document.getElementById(b.dataset.target);
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  /* highlight active nav based on scroll */
+  const sections = document.querySelectorAll('section');
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        buttons.forEach(b => b.classList.toggle('active', b.dataset.target === e.target.id));
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => navObserver.observe(s));
+
+  /* ============ SCROLL REVEAL ============ */
+  const reveals = document.querySelectorAll('.reveal, .section-num');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  reveals.forEach(r => revealObserver.observe(r));
+
+  /* ============ PROJECT CARD 3D TILT ============ */
+  document.querySelectorAll('[data-tilt]').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = (e.clientY - rect.top) / rect.height;
+      const rx = (0.5 - y) * 10;
+      const ry = (x - 0.5) * 10;
+      card.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
+      card.style.setProperty('--mx', (x*100)+'%');
+      card.style.setProperty('--my', (y*100)+'%');
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+
+  /* ============ CUSTOM CURSOR ============ */
+  const cursor = document.querySelector('.cursor');
+  const dot    = document.querySelector('.cursor-dot');
+  let cx=0, cy=0, tx=0, ty=0;
+  window.addEventListener('mousemove', e => {
+    tx = e.clientX; ty = e.clientY;
+    dot.style.transform = `translate(${tx}px, ${ty}px) translate(-50%, -50%)`;
+  });
+  function cursorLoop(){
+    cx += (tx - cx) * 0.18;
+    cy += (ty - cy) * 0.18;
+    cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+    requestAnimationFrame(cursorLoop);
+  }
+  cursorLoop();
+  document.querySelectorAll('a, button, [data-tilt]').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+  });
+
+
+  /* ============ YEAR ============ */
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- ============ PDF.js for CV viewer ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function(){
+  if(typeof pdfjsLib === 'undefined'){
+    document.getElementById('cv-loading').innerHTML =
+      '<p style="color:#b3a896;text-align:center;padding:0 20px">' +
+      'Could not load PDF renderer. Check your internet connection.</p>';
+    return;
+  }
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  function b64ToBytes(b64){
+    const bin = atob(b64.replace(/\s/g, ''));
+    const bytes = new Uint8Array(bin.length);
+    for(let i=0; i<bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes;
+  }
+
+  let pdfDoc = null, pageNum = 1, rendering = false, queued = null;
+
+  const canvas = document.getElementById('cv-canvas');
+  const ctx = canvas.getContext('2d');
+  const wrap = document.getElementById('cv-frame-wrap');
+  const loading = document.getElementById('cv-loading');
+  const pageEl = document.getElementById('cv-page');
+  const totalEl = document.getElementById('cv-total');
+  const prevBtn = document.getElementById('cv-prev');
+  const nextBtn = document.getElementById('cv-next');
+  const fullBtn = document.getElementById('cv-full');
+
+  function updateBtns(){
+    prevBtn.disabled = pageNum <= 1;
+    nextBtn.disabled = !pdfDoc || pageNum >= pdfDoc.numPages;
+  }
+
+  function renderPage(num){
+    if(rendering){ queued = num; return; }
+    rendering = true;
+    pdfDoc.getPage(num).then(page => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const wrapW = wrap.clientWidth - 32;
+      const baseViewport = page.getViewport({scale: 1});
+      const scale = Math.min(2.0, Math.max(1.0, wrapW / baseViewport.width));
+      const viewport = page.getViewport({scale: scale * dpr});
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      canvas.style.width = (viewport.width / dpr) + 'px';
+      canvas.style.height = (viewport.height / dpr) + 'px';
+      page.render({canvasContext: ctx, viewport}).promise.then(() => {
+        rendering = false;
+        pageNum = num;
+        pageEl.textContent = num;
+        updateBtns();
+        if(queued !== null){ const q = queued; queued = null; renderPage(q); }
+      }).catch(err => {
+        rendering = false; console.error('Render error:', err);
+      });
+    });
+  }
+
+  async function loadCV(){
+    try{
+      let data;
+      try{
+        const res = await fetch('assets/cv.pdf?v=2');
+        if(!res.ok) throw new Error('HTTP ' + res.status);
+        data = new Uint8Array(await res.arrayBuffer());
+      } catch(fetchErr){
+        // file:// pages (opened from disk) can't fetch; load the embedded copy instead
+        await new Promise((ok, fail) => {
+          const s = document.createElement('script');
+          s.src = 'assets/cv.js?v=2'; s.onload = ok; s.onerror = fail;
+          document.head.appendChild(s);
+        });
+        data = b64ToBytes(window.CV_B64);
+      }
+      pdfDoc = await pdfjsLib.getDocument({data}).promise;
+      totalEl.textContent = pdfDoc.numPages;
+      loading.classList.add('done');
+      renderPage(1);
+    } catch(err){
+      console.error('CV load error:', err);
+      loading.innerHTML = '<p>Failed to load CV.</p>';
+    }
+  }
+
+  prevBtn.addEventListener('click', () => { if(pdfDoc && pageNum > 1) renderPage(pageNum - 1); });
+  nextBtn.addEventListener('click', () => { if(pdfDoc && pageNum < pdfDoc.numPages) renderPage(pageNum + 1); });
+  fullBtn.addEventListener('click', () => {
+    wrap.classList.toggle('fullscreen');
+    fullBtn.innerHTML = wrap.classList.contains('fullscreen') ? '✕&nbsp;Exit' : '⛶&nbsp;Fullscreen';
+    if(pdfDoc) setTimeout(() => renderPage(pageNum), 50);
+  });
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape' && wrap.classList.contains('fullscreen')){
+      wrap.classList.remove('fullscreen');
+      fullBtn.innerHTML = '⛶&nbsp;Fullscreen';
+      if(pdfDoc) setTimeout(() => renderPage(pageNum), 50);
+    }
+    if(e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if(e.key === 'ArrowLeft' && pdfDoc && pageNum > 1) renderPage(pageNum - 1);
+    if(e.key === 'ArrowRight' && pdfDoc && pageNum < pdfDoc.numPages) renderPage(pageNum + 1);
+  });
+
+  // Re-render on resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { if(pdfDoc) renderPage(pageNum); }, 200);
+  });
+
+  loadCV();
+})();
+</script>
+
+<!-- ============================================================
+     PROJECT MODALS — case studies, rendered inline
+     PHOTO SWAP: Each modal has 6 <img class="gallery-img"> tags.
+     Replace src="data:image/svg+xml..." with your actual photo
+     paths (e.g. src="screenshots/pos-dashboard.png").
+     Edit data-caption on each .gallery-item to change captions.
+============================================================ -->
+
+<!-- ===== MODAL 1: POS & PAYROLL ===== -->
+
+<div class="project-modal" id="modal-emmark" role="dialog" aria-modal="true" aria-labelledby="modal-emmark-title">
+  <div class="modal-backdrop"></div>
+  <button class="modal-back" data-modal-close>Back to portfolio</button>
+  <button class="modal-close" aria-label="Close" data-modal-close>×</button>
+  <div class="modal-content">
+    <div class="modal-meta">// Project 01 · EMMARK Light Fittings Wholesale · 2026</div>
+    <h1 id="modal-emmark-title">EMMARK <em>Lighting</em><br/>Website &amp; ERP</h1>
+    <p class="modal-tagline">
+      A premium public catalogue for a lighting wholesaler, and the secure
+      business platform behind it that runs sales, stock and shipments.
+    </p>
+    <a class="modal-live" href="https://emmark.kavinduvishwa27.workers.dev/" target="_blank" rel="noopener">Visit live site ↗</a>
+    <a class="modal-live alt" href="https://emmark.kavinduvishwa27.workers.dev/erp/index.html" target="_blank" rel="noopener">ERP staff sign-in ↗</a>
+
+    <div class="modal-facts">
+      <div class="modal-fact"><div class="k">Client</div><div class="v">EMMARK</div></div>
+      <div class="modal-fact"><div class="k">Role</div><div class="v">Full-Stack Developer</div></div>
+      <div class="modal-fact"><div class="k">Year</div><div class="v">2026</div></div>
+      <div class="modal-fact"><div class="k">Scope</div><div class="v">Website · ERP</div></div>
+    </div>
+
+    <section class="modal-section">
+      <div class="modal-label">// 01 — Overview</div>
+      <h2>What it does.</h2>
+      <div class="modal-prose">
+        <p>EMMARK imports light fittings from China and sells them wholesale across Sri Lanka. The owner works from China while the sales team works locally, so the business needed one platform both sides could run from — not just a brochure site.</p>
+        <p>The <strong>public website</strong> is a fast, mobile-first catalogue of 100 products across six ranges, with a 3D hero, product detail pages, a quote list customers build as they browse, and a “Light Lab” that estimates how much light a room needs and previews colour temperature.</p>
+        <p>Behind it sits the <strong>ERP</strong>: leads, quotations, sales orders, invoices, payments, inventory across warehouses, purchase orders, shipments and customs with landed cost, expenses, profitability reports and user roles. Every action in the ERP is monitored: who created, edited, approved or deleted what, and when, is written to an audit log the owner can review from anywhere. The public site never exposes prices, staff logins or customer data.</p>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 02 — Stack</div>
+      <h2>Built with.</h2>
+      <div class="modal-tag-row">
+        <span class="modal-tag">HTML</span>
+        <span class="modal-tag">CSS</span>
+        <span class="modal-tag">JavaScript</span>
+        <span class="modal-tag">Three.js</span>
+        <span class="modal-tag">Cloudflare Workers</span>
+        <span class="modal-tag">Cloudflare D1 (SQL)</span>
+        <span class="modal-tag">Python build tooling</span>
+        <span class="modal-tag">Role-based access</span>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 03 — Highlights</div>
+      <h2>Key features.</h2>
+      <div class="modal-features">
+        <div class="modal-feature"><div class="num">01</div><h3>Live Product Catalogue</h3><p>Six lighting ranges, filterable product pages and SKU detail views, generated from a single catalogue source.</p></div>
+        <div class="modal-feature"><div class="num">02</div><h3>Quote Builder</h3><p>Customers add fittings to a quote list and send a request; it lands in the ERP as a lead for the sales team.</p></div>
+        <div class="modal-feature"><div class="num">03</div><h3>Light Lab Tools</h3><p>A room lighting calculator (lumens, lux, wattage) and a 2700K–6500K colour-temperature preview.</p></div>
+        <div class="modal-feature"><div class="num">04</div><h3>Business ERP</h3><p>Quotations, invoices, inventory, purchase orders, shipments and customs, behind a staff-only sign-in with role permissions and an audit log of every action.</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 04 — Gallery</div>
+      <h2>From the build.</h2>
+      <div class="modal-gallery">
+        <div class="gallery-item wide" data-caption="Homepage">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Homepage" src="assets/img/emmark/home.jpg" />
+        </div>
+        <div class="gallery-item tall" data-caption="Mobile view">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Mobile view" src="assets/img/emmark/mobile.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Lighting ranges">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Lighting ranges" src="assets/img/emmark/ranges.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Product catalogue">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Product catalogue" src="assets/img/emmark/products.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Product detail">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Product detail" src="assets/img/emmark/product-detail.jpg" />
+        </div>
+        <div class="gallery-item wide" data-caption="Light Lab calculator">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Light Lab calculator" src="assets/img/emmark/lux-calculator.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Request a quote">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Request a quote" src="assets/img/emmark/quote.jpg" />
+        </div>
+        <div class="gallery-item wide" data-caption="ERP staff sign-in">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="ERP staff sign-in" src="assets/img/emmark/erp-signin.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-end">
+      <button class="modal-end-back" data-modal-close>Back to portfolio</button>
+      <span class="modal-end-tag">Kavindu Vishwa Godagampola</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-modal" id="modal-freelancer" role="dialog" aria-modal="true" aria-labelledby="modal-freelancer-title">
+  <div class="modal-backdrop"></div>
+  <button class="modal-back" data-modal-close>Back to portfolio</button>
+  <button class="modal-close" aria-label="Close" data-modal-close>×</button>
+  <div class="modal-content">
+    <div class="modal-meta">// Project 02 · Freelancer College · 2026</div>
+    <h1 id="modal-freelancer-title">Freelancer <em>College</em><br/>Website &amp; Admin</h1>
+    <p class="modal-tagline">
+      A clean, conversion-focused course website and the admin system
+      that lets a small team run enrolments, leads and content themselves.
+    </p>
+    <a class="modal-live" href="https://learn-with-bevin.pages.dev/" target="_blank" rel="noopener">Visit live site ↗</a>
+
+    <div class="modal-facts">
+      <div class="modal-fact"><div class="k">Client</div><div class="v">Freelancer College</div></div>
+      <div class="modal-fact"><div class="k">Role</div><div class="v">Developer</div></div>
+      <div class="modal-fact"><div class="k">Year</div><div class="v">2026</div></div>
+      <div class="modal-fact"><div class="k">Scope</div><div class="v">Website · Admin panel</div></div>
+    </div>
+
+    <section class="modal-section">
+      <div class="modal-label">// 01 — Overview</div>
+      <h2>What it does.</h2>
+      <div class="modal-prose">
+        <p>Freelancer College teaches sellable skills such as UI/UX design and Linux in Sinhala, then the system to turn them into paid work. The site needed to explain the programs clearly, show proof, and take people from interest to enrolment.</p>
+        <p>The <strong>public website</strong> covers the courses (Designer X and Linux Master), the LEAP method, success stories, webinars, free resources, a blog and checkout, built mobile-first and fast on Cloudflare Pages.</p>
+        <p>The <strong>admin panel</strong> manages batch dates and prices, curriculum, FAQs, testimonials and blog posts, and changes go live in about ten seconds with no rebuild. Every form lands as a lead, every checkout becomes an enrolment, seats-left updates automatically, and card payments are recorded through PayHere.</p>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 02 — Stack</div>
+      <h2>Built with.</h2>
+      <div class="modal-tag-row">
+        <span class="modal-tag">HTML</span>
+        <span class="modal-tag">CSS</span>
+        <span class="modal-tag">JavaScript</span>
+        <span class="modal-tag">Python (build)</span>
+        <span class="modal-tag">Cloudflare Pages</span>
+        <span class="modal-tag">Pages Functions</span>
+        <span class="modal-tag">Cloudflare D1 (SQL)</span>
+        <span class="modal-tag">PayHere</span>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 03 — Highlights</div>
+      <h2>Key features.</h2>
+      <div class="modal-features">
+        <div class="modal-feature"><div class="num">01</div><h3>Live Content Editing</h3><p>Prices, dates, curriculum, FAQs and blog posts are edited in the panel and appear on the site within seconds.</p></div>
+        <div class="modal-feature"><div class="num">02</div><h3>Leads &amp; Enrolments</h3><p>Webinar, contact, quiz and waitlist forms feed one lead list, with status, notes, WhatsApp and CSV export.</p></div>
+        <div class="modal-feature"><div class="num">03</div><h3>Payments &amp; Seats</h3><p>Checkout creates an enrolment; payments update its status and the seats left shown on the website.</p></div>
+        <div class="modal-feature"><div class="num">04</div><h3>Secure &amp; Resilient</h3><p>Admin protected by password or Cloudflare Access; if the database is unreachable, pre-built pages are served so the site never breaks.</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 04 — Gallery</div>
+      <h2>From the build.</h2>
+      <div class="modal-gallery">
+        <div class="gallery-item wide" data-caption="Homepage">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Homepage" src="assets/img/freelancer/home.jpg" />
+        </div>
+        <div class="gallery-item tall" data-caption="Mobile view">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Mobile view" src="assets/img/freelancer/mobile.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Courses">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Courses" src="assets/img/freelancer/courses.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="The LEAP method">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="The LEAP method" src="assets/img/freelancer/method.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Designer X program">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Designer X program" src="assets/img/freelancer/designer-x.jpg" />
+        </div>
+        <div class="gallery-item wide" data-caption="Free webinar registration">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Free webinar registration" src="assets/img/freelancer/webinar.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-end">
+      <button class="modal-end-back" data-modal-close>Back to portfolio</button>
+      <span class="modal-end-tag">Kavindu Vishwa Godagampola</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-modal" id="modal-wilpotha" role="dialog" aria-modal="true" aria-labelledby="modal-wilpotha-title">
+  <div class="modal-backdrop"></div>
+  <button class="modal-back" data-modal-close>Back to portfolio</button>
+  <button class="modal-close" aria-label="Close" data-modal-close>×</button>
+  <div class="modal-content">
+    <div class="modal-meta">// Project 03 · Wilpotha Agri Business · 2026</div>
+    <h1 id="modal-wilpotha-title">Wilpotha <em>Agri</em><br/>Brand &amp; Digital Launch</h1>
+    <p class="modal-tagline">
+      Planning the move from selling commodity nuts to a premium,
+      branded food business with its own online sales channel.
+    </p>
+
+    <div class="modal-facts">
+      <div class="modal-fact"><div class="k">Client</div><div class="v">Wilpotha Agri Business</div></div>
+      <div class="modal-fact"><div class="k">Role</div><div class="v">Digital &amp; Brand Lead</div></div>
+      <div class="modal-fact"><div class="k">Year</div><div class="v">2026</div></div>
+      <div class="modal-fact"><div class="k">Focus</div><div class="v">Brand · Web · Launch</div></div>
+    </div>
+
+    <section class="modal-section">
+      <div class="modal-label">// 01 — Overview</div>
+      <h2>What it does.</h2>
+      <div class="modal-prose">
+        <p>Wilpotha Agri Business sources, grades and distributes cashews and peanuts. It sold mainly as a commodity supplier and wanted to become a recognised premium brand that sells online, to retailers, hotels and corporate clients.</p>
+        <p>I wrote an <strong>eight-phase modernization plan</strong> (research, product development, production, branding, sales, digital transformation, launch and scale) and a product strategy that turns one raw material into six product lines at different price points.</p>
+        <p>For the digital side I produced the <strong>website build spec</strong> (brand tokens, typography, sitemap, page-by-page copy, components, SEO and functionality) and a <strong>launch plan</strong> to get an online purchasing site, social channels, payments and courier in place for a 5 October 2026 launch.</p>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 02 — Stack</div>
+      <h2>Built with.</h2>
+      <div class="modal-tag-row">
+        <span class="modal-tag">Brand Identity</span>
+        <span class="modal-tag">Design Tokens</span>
+        <span class="modal-tag">Information Architecture</span>
+        <span class="modal-tag">Copywriting</span>
+        <span class="modal-tag">SEO</span>
+        <span class="modal-tag">Project Planning</span>
+        <span class="modal-tag">E-Commerce Planning</span>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 03 — Highlights</div>
+      <h2>Key features.</h2>
+      <div class="modal-features">
+        <div class="modal-feature"><div class="num">01</div><h3>Brand System</h3><p>“Quiet luxury from the soil”: forest, ivory and heritage gold with Cormorant Garamond and Jost, ready as CSS tokens.</p></div>
+        <div class="modal-feature"><div class="num">02</div><h3>Website Build Spec</h3><p>Sitemap, page-by-page copy, components, SEO and a checklist so the site can be built by any developer or tool.</p></div>
+        <div class="modal-feature"><div class="num">03</div><h3>Modernization Roadmap</h3><p>Eight phases from research to export readiness, with workstreams, product strategy and key questions to answer.</p></div>
+        <div class="modal-feature"><div class="num">04</div><h3>Launch Plan</h3><p>A coordinated online launch: website, social coverage, ads, payment-link approval and courier onboarding.</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 04 — Gallery</div>
+      <h2>From the plan.</h2>
+      <div class="modal-gallery">
+        <div class="gallery-item wide" data-caption="Website hero concept">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Website hero concept" src="assets/img/wilpotha/website-hero.jpg" />
+        </div>
+        <div class="gallery-item tall" data-caption="Mobile website concept">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Mobile website concept" src="assets/img/wilpotha/mobile-concept.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Cashew grade guide">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Cashew grade guide" src="assets/img/wilpotha/cashew-grades.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Brand system">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Brand system" src="assets/img/wilpotha/brand-system.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Modernization roadmap">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Modernization roadmap" src="assets/img/wilpotha/roadmap.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Product strategy">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Product strategy" src="assets/img/wilpotha/product-strategy.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Launch plan">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Launch plan" src="assets/img/wilpotha/launch-plan.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-end">
+      <button class="modal-end-back" data-modal-close>Back to portfolio</button>
+      <span class="modal-end-tag">Kavindu Vishwa Godagampola</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-modal" id="modal-pos" role="dialog" aria-modal="true" aria-labelledby="modal-pos-title">
+  <div class="modal-backdrop"></div>
+  <button class="modal-back" data-modal-close>Back to portfolio</button>
+  <button class="modal-close" aria-label="Close" data-modal-close>×</button>
+  <div class="modal-content">
+    <div class="modal-meta">// Project 04 · S&amp;K House · 2026</div>
+    <h1 id="modal-pos-title">Automated <em>POS</em><br/>&amp; Payroll System</h1>
+    <p class="modal-tagline">
+      A complete retail operations system replacing a manual cash and
+      paysheet workflow with one connected platform.
+    </p>
+
+    <div class="modal-facts">
+      <div class="modal-fact"><div class="k">Client</div><div class="v">S&amp;K House</div></div>
+      <div class="modal-fact"><div class="k">Role</div><div class="v">System Developer</div></div>
+      <div class="modal-fact"><div class="k">Year</div><div class="v">2026 — Present</div></div>
+      <div class="modal-fact"><div class="k">Status</div><div class="v">In Production</div></div>
+    </div>
+
+    <section class="modal-section">
+      <div class="modal-label">// 01 — Overview</div>
+      <h2>What it does.</h2>
+      <div class="modal-prose">
+        <p>S&amp;K House needed to retire a manual cash-handling and paysheet routine that ate hours every cycle and left the business exposed to human error. I built a connected <strong>point-of-sale and payroll system</strong> that runs the storefront, captures every transaction, and rolls daily sales straight into payroll.</p>
+        <p>At month-end the system <strong>generates employee paysheets automatically</strong> from the same data, eliminating reconciliation work and removing the spreadsheet-shuffle entirely. Staff get a clear, auditable record. Management gets back time.</p>
+        <p>Alongside the system I also took over the company's <strong>digital presence</strong> — managing social channels and supporting internal workflows so the operational and digital sides stayed in step.</p>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 02 — Stack</div>
+      <h2>Built with.</h2>
+      <div class="modal-tag-row">
+        <span class="modal-tag">Python</span>
+        <span class="modal-tag">SQL</span>
+        <span class="modal-tag">JavaScript</span>
+        <span class="modal-tag">HTML &amp; CSS</span>
+        <span class="modal-tag">Workflow Automation</span>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 03 — Highlights</div>
+      <h2>Key features.</h2>
+      <div class="modal-features">
+        <div class="modal-feature"><div class="num">01</div><h3>Live POS Terminal</h3><p>Fast checkout flow purpose-built for the shop floor, with sales history searchable by date, item, and operator.</p></div>
+        <div class="modal-feature"><div class="num">02</div><h3>Auto-Generated Paysheets</h3><p>Monthly payroll cycles run end-to-end without a spreadsheet — paysheets land in the right format, every time.</p></div>
+        <div class="modal-feature"><div class="num">03</div><h3>Single Source of Truth</h3><p>Sales, staff hours and payroll share one database, so reports stay reconciled and auditable.</p></div>
+        <div class="modal-feature"><div class="num">04</div><h3>Digital Workflow Support</h3><p>Connected to the social and content workflow so the storefront and the brand operate from the same data.</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 04 — Gallery</div>
+      <h2>From the build.</h2>
+      <div class="modal-gallery">
+        <div class="gallery-item wide" data-caption="Overview Dashboard">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Overview Dashboard" src="assets/img/shot-01.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Employee Management">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Employee Management" src="assets/img/shot-02.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Edit Employee - Details">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Edit Employee - Details" src="assets/img/shot-03.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Edit Employee - Payment Method">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Edit Employee - Payment Method" src="assets/img/shot-04.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Work Load & Assignments">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Work Load & Assignments" src="assets/img/shot-05.png" />
+        </div>
+        <div class="gallery-item wide" data-caption="Paysheet Generator">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Paysheet Generator" src="assets/img/shot-06.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Payslip Preview">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Payslip Preview" src="assets/img/shot-07.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Print / Save PDF Dialog">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Print / Save PDF Dialog" src="assets/img/shot-08.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Payslip History">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Payslip History" src="assets/img/shot-09.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Generated Payslip PDF">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Generated Payslip PDF" src="assets/img/shot-10.png" />
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-end">
+      <button class="modal-end-back" data-modal-close>Back to portfolio</button>
+      <span class="modal-end-tag">Kavindu Vishwa Godagampola</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL 2: AI TRADING ===== -->
+<div class="project-modal" id="modal-trading" role="dialog" aria-modal="true" aria-labelledby="modal-trading-title">
+  <div class="modal-backdrop"></div>
+  <button class="modal-back" data-modal-close>Back to portfolio</button>
+  <button class="modal-close" aria-label="Close" data-modal-close>×</button>
+  <div class="modal-content">
+    <div class="modal-meta">// Project 05 · Self-Initiated · 2026</div>
+    <h1 id="modal-trading-title">AI <em>Trading</em><br/>Signal Platform</h1>
+    <p class="modal-tagline">
+      A technical analysis web app for crypto and forex markets, powered
+      by an AI agent that reads the news and runs eight strategies in
+      parallel.
+    </p>
+
+    <div class="modal-facts">
+      <div class="modal-fact"><div class="k">Project Type</div><div class="v">Self-Initiated</div></div>
+      <div class="modal-fact"><div class="k">Role</div><div class="v">Solo Developer</div></div>
+      <div class="modal-fact"><div class="k">Year</div><div class="v">2026</div></div>
+      <div class="modal-fact"><div class="k">Strategies</div><div class="v">8 in parallel</div></div>
+    </div>
+
+    <section class="modal-section">
+      <div class="modal-label">// 01 — Overview</div>
+      <h2>What it does.</h2>
+      <div class="modal-prose">
+        <p>Markets move on news as much as charts. So instead of writing another indicator overlay, I built a platform where an <strong>AI agent ingests live news</strong> and feeds it into the same engine running technical analysis on crypto pairs and forex.</p>
+        <p>The engine evaluates <strong>eight distinct strategies</strong> in parallel for every signal — momentum, mean-reversion, breakout, volume-confirmed trends, and others — and only emits a trade when the strategies agree across both the chart and the news context.</p>
+        <p>I tracked every emitted signal across <strong>more than twenty rounds</strong> of live progress checks, watching how each strategy held up under different market conditions and tightening the agent's behavior cycle after cycle.</p>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 02 — Stack</div>
+      <h2>Built with.</h2>
+      <div class="modal-tag-row">
+        <span class="modal-tag">Python</span>
+        <span class="modal-tag">AI Agent</span>
+        <span class="modal-tag">News API</span>
+        <span class="modal-tag">JavaScript</span>
+        <span class="modal-tag">Charting</span>
+        <span class="modal-tag">Technical Analysis</span>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 03 — Highlights</div>
+      <h2>Key features.</h2>
+      <div class="modal-features">
+        <div class="modal-feature"><div class="num">01</div><h3>AI News Agent</h3><p>An autonomous agent pulls financial news in real time and tags each story by market, asset and sentiment before handing it to the engine.</p></div>
+        <div class="modal-feature"><div class="num">02</div><h3>Eight-Strategy Ensemble</h3><p>Trend-following, mean-reversion, breakout and momentum strategies run in parallel — signals fire only when multiple strategies align.</p></div>
+        <div class="modal-feature"><div class="num">03</div><h3>Live Tracking &amp; Iteration</h3><p>Each signal is monitored against actual price action across 20+ live rounds, so strategy weights adapt instead of being hard-coded.</p></div>
+        <div class="modal-feature"><div class="num">04</div><h3>Crypto &amp; Forex Coverage</h3><p>The same engine works on both crypto pairs and traditional forex, so the platform stays useful across asset classes.</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 04 — Gallery</div>
+      <h2>From the build.</h2>
+      <div class="modal-gallery">
+        <div class="gallery-item wide" data-caption="Market Confluence Dashboard">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Market Confluence Dashboard" src="assets/img/shot-11.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="8-Strategy Confluence Engine">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="8-Strategy Confluence Engine" src="assets/img/shot-12.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Price Action & Live Chart">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Price Action & Live Chart" src="assets/img/shot-13.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Indicators & Trade Setup Calculator">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Indicators & Trade Setup Calculator" src="assets/img/shot-14.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Asset Selection Menu (Crypto & Forex)">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Asset Selection Menu (Crypto & Forex)" src="assets/img/shot-15.png" />
+        </div>
+        <div class="gallery-item wide" data-caption="Forex Market Analysis (EUR/USD Lean Sell)">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Forex Market Analysis (EUR/USD Lean Sell)" src="assets/img/shot-16.png" />
+        </div>
+        <div class="gallery-item normal" data-caption="Real-Time Signal Alert (Gold Lean Sell)">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Real-Time Signal Alert (Gold Lean Sell)" src="assets/img/shot-17.png" />
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-end">
+      <button class="modal-end-back" data-modal-close>Back to portfolio</button>
+      <span class="modal-end-tag">Kavindu Vishwa Godagampola</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL 3: COOFANDY ===== -->
+<div class="project-modal" id="modal-coofandy" role="dialog" aria-modal="true" aria-labelledby="modal-coofandy-title">
+  <div class="modal-backdrop"></div>
+  <button class="modal-back" data-modal-close>Back to portfolio</button>
+  <button class="modal-close" aria-label="Close" data-modal-close>×</button>
+  <div class="modal-content">
+    <div class="modal-meta">// Project 06 · COOFANDY Clothing · 2024</div>
+    <h1 id="modal-coofandy-title">COOFANDY<br/><em>E-Commerce</em> Platform</h1>
+    <p class="modal-tagline">
+      Rebuilding a clothing store's online presence for speed, security,
+      and a buyer journey that holds up under real traffic.
+    </p>
+
+    <div class="modal-facts">
+      <div class="modal-fact"><div class="k">Client</div><div class="v">COOFANDY</div></div>
+      <div class="modal-fact"><div class="k">Role</div><div class="v">Web Developer</div></div>
+      <div class="modal-fact"><div class="k">Year</div><div class="v">2024</div></div>
+      <div class="modal-fact"><div class="k">Focus</div><div class="v">Speed · UX · Security</div></div>
+    </div>
+
+    <section class="modal-section">
+      <div class="modal-label">// 01 — Overview</div>
+      <h2>What it does.</h2>
+      <div class="modal-prose">
+        <p>COOFANDY's storefront needed an overhaul. The store was functional but slow, visually inconsistent across devices, and missing the security baselines a real e-commerce operation depends on. I worked with the team to rebuild it from the inside out.</p>
+        <p>The brief covered three priorities at once: <strong>performance</strong>, so pages loaded fast across patchy mobile connections; <strong>usability</strong>, so the path from landing to checkout was obvious and frictionless; and <strong>security</strong>, so transactions and customer data were handled with the defaults you'd expect from a modern shop.</p>
+        <p>I optimized assets, restructured the layout for responsive breakpoints, hardened forms and inputs, and collaborated with the team on the broader platform experience so the store felt cohesive end-to-end.</p>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 02 — Stack</div>
+      <h2>Built with.</h2>
+      <div class="modal-tag-row">
+        <span class="modal-tag">HTML</span>
+        <span class="modal-tag">CSS</span>
+        <span class="modal-tag">JavaScript</span>
+        <span class="modal-tag">Responsive Design</span>
+        <span class="modal-tag">E-Commerce</span>
+        <span class="modal-tag">Web Security</span>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 03 — Highlights</div>
+      <h2>Key features.</h2>
+      <div class="modal-features">
+        <div class="modal-feature"><div class="num">01</div><h3>Performance Pass</h3><p>Compressed assets, leaner markup, and smarter load order so the store feels instant on mobile networks.</p></div>
+        <div class="modal-feature"><div class="num">02</div><h3>Responsive From The Start</h3><p>Layout rebuilt for fluid breakpoints — the storefront looks intentional on a phone, tablet or desktop.</p></div>
+        <div class="modal-feature"><div class="num">03</div><h3>Security Hardening</h3><p>Form validation, input sanitization, and secure handling of customer data to meet the baseline expected of an online shop.</p></div>
+        <div class="modal-feature"><div class="num">04</div><h3>Smoother Buyer Journey</h3><p>Clearer browse-to-cart-to-checkout flow worked out with the team — fewer dead-ends, more conversions.</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal-label">// 04 — Gallery</div>
+      <h2>From the build.</h2>
+      <div class="modal-gallery">
+        <div class="gallery-item wide" data-caption="Homepage">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Homepage" src="assets/img/shot-18.jpg" />
+        </div>
+        <div class="gallery-item tall" data-caption="Mobile View">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Mobile view" src="assets/img/shot-19.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Product Page">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Product page" src="assets/img/shot-20.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Cart View">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Cart view" src="assets/img/shot-21.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Checkout Flow">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Checkout flow" src="assets/img/shot-22.jpg" />
+        </div>
+        <div class="gallery-item normal" data-caption="Category Grid">
+          <img loading="lazy" decoding="async" class="gallery-img" alt="Category grid" src="assets/img/shot-23.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-end">
+      <button class="modal-end-back" data-modal-close>Back to portfolio</button>
+      <span class="modal-end-tag">Kavindu Vishwa Godagampola</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL OPEN/CLOSE LOGIC ============ -->
+<script>
+(function(){
+  const modals = document.querySelectorAll('.project-modal');
+
+  function openModal(id){
+    const modal = document.getElementById(id);
+    if(!modal) return;
+    modal.classList.add('open');
+    modal.scrollTop = 0;
+    document.body.classList.add('modal-open');
+    document.body.dataset.scrollY = window.scrollY;
+  }
+  function closeModals(){
+    modals.forEach(m => m.classList.remove('open'));
+    document.body.classList.remove('modal-open');
+  }
+
+  // Open from any element with data-modal or data-modal-link
+  document.querySelectorAll('[data-modal]').forEach(el => {
+    el.addEventListener('click', e => {
+      // ignore clicks on the inner case-study link (handled below)
+      if(e.target.closest('[data-modal-link]')) return;
+      openModal(el.dataset.modal);
+    });
+  });
+  document.querySelectorAll('[data-modal-link]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      openModal(el.dataset.modalLink);
+    });
+  });
+
+  // Close handlers
+  document.querySelectorAll('[data-modal-close], .modal-backdrop').forEach(el => {
+    el.addEventListener('click', closeModals);
+  });
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape'){
+      const anyOpen = document.querySelector('.project-modal.open');
+      if(anyOpen) closeModals();
+    }
+  });
+})();
+</script>
+
+<!-- ===== LIGHTBOX INTERACTIVE OVERLAY ===== -->
+<div id="portfolio-lightbox" class="lightbox-overlay" aria-hidden="true" role="dialog">
+  <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+  <button class="lightbox-prev" aria-label="Previous Image">&#10094;</button>
+  <button class="lightbox-next" aria-label="Next Image">&#10095;</button>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="Expanded preview" />
+    <div id="lightbox-caption"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const lightbox = document.getElementById('portfolio-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const prevBtn = lightbox.querySelector('.lightbox-prev');
+  const nextBtn = lightbox.querySelector('.lightbox-next');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+
+  let currentGalleryImages = [];
+  let currentActiveIndex = 0;
+
+  function showImage(index) {
+    if (index < 0 || index >= currentGalleryImages.length) return;
+    currentActiveIndex = index;
+    const imgData = currentGalleryImages[index];
+    
+    lightboxImg.src = imgData.src;
+    lightboxImg.alt = imgData.alt;
+    lightboxCaption.textContent = (currentGalleryImages.length > 1 ? (index + 1) + ' / ' + currentGalleryImages.length + '  ·  ' : '') + imgData.caption;
+  }
+
+  function openLightbox(galleryImages, index) {
+    currentGalleryImages = galleryImages;
+    showImage(index);
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // prevent scrolling underneath
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = ''; // restore scrolling
+  }
+
+  function navigate(direction) {
+    if (currentGalleryImages.length <= 1) return;
+    let nextIndex = currentActiveIndex + direction;
+    if (nextIndex >= currentGalleryImages.length) nextIndex = 0;
+    if (nextIndex < 0) nextIndex = currentGalleryImages.length - 1;
+    showImage(nextIndex);
+  }
+
+  // Bind to all gallery items dynamically
+  document.addEventListener('click', e => {
+    const galleryItem = e.target.closest('.gallery-item');
+    if (!galleryItem) return;
+
+    e.preventDefault();
+    const galleryContainer = galleryItem.closest('.modal-gallery');
+    if (!galleryContainer) return;
+
+    // Get all items in this specific gallery
+    const items = Array.from(galleryContainer.querySelectorAll('.gallery-item'));
+    const galleryImages = items.map(item => {
+      const img = item.querySelector('.gallery-img');
+      return {
+        src: img.getAttribute('src'),
+        alt: img.getAttribute('alt') || '',
+        caption: item.getAttribute('data-caption') || ''
+      };
+    });
+
+    const index = items.indexOf(galleryItem);
+    openLightbox(galleryImages, index);
+  });
+
+  // Close triggers
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => {
+    // Close if clicking backdrop or the expanded image itself
+    if (e.target === lightboxImg) { navigate(1); return; }
+    if (e.target === lightbox || e.target.closest('.lightbox-content') === null) {
+      if (e.target !== prevBtn && e.target !== nextBtn) {
+        closeLightbox();
+      }
+    }
+  });
+
+  // Navigation click
+  prevBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    navigate(-1);
+  });
+  nextBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    navigate(1);
+  });
+
+  // Swipe navigation (touch)
+  let touchX = null;
+  lightbox.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  lightbox.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 40) navigate(dx < 0 ? 1 : -1);
+    touchX = null;
+  }, { passive: true });
+
+  // Keyboard navigation
+  window.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (['Escape', 'ArrowRight', 'ArrowLeft'].includes(e.key)) e.stopImmediatePropagation();
+
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowRight') {
+      navigate(1);
+    } else if (e.key === 'ArrowLeft') {
+      navigate(-1);
+    }
+  }, true); // capture: runs before the project pop-up's own Escape handler
+})();
+</script>
+
+<script>
+(function(){
+  const root = document.documentElement;
+  const set = () => root.style.setProperty('--veil',
+    Math.min(0.5, (window.scrollY / window.innerHeight) * 0.5).toFixed(3));
+  window.addEventListener('scroll', set, { passive: true });
+  set();
+})();
+</script>
+</body>
+</html>
