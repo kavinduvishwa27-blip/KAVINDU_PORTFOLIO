@@ -2,10 +2,10 @@
 
 Black-hole themed portfolio. Plain HTML, CSS and JavaScript: **no build step, nothing to install**.
 
-- The background is a real-time WebGL black hole (`assets/js/blackhole.js`): each pixel's light ray bends around the hole, crosses the accretion disk and samples a lensed starfield. It lowers its own resolution on slow devices, pauses when the tab is hidden, and falls back to a CSS image if WebGL is unavailable.
+- The background is the original black hole film (`assets/media/bg-video.mp4`, driven by `assets/js/blackhole.js`). Its poster (`assets/bg-poster.jpg`) shows instantly; the video loads only after the page has finished, is skipped on Save-Data, and drifts with the mouse and zooms deeper as you scroll.
 - All projects and case studies come from **`assets/js/projects.js`**. Edit that file to change text, tags or photos, or to add a project.
 - The CV preview renders `assets/cv.pdf` with pdf.js (loaded from cdnjs only when you scroll near it). Replace that file to update the CV.
-- Visitors with "reduce motion" switched on get a still black hole and no entrance animations.
+- Visitors with "reduce motion" switched on get the still poster and no entrance animations.
 
 ## Files
 
@@ -13,10 +13,11 @@ Black-hole themed portfolio. Plain HTML, CSS and JavaScript: **no build step, no
 |---|---|
 | `index.html` | The page |
 | `assets/css/style.css` | All styles |
-| `assets/js/blackhole.js` | WebGL black hole |
+| `assets/js/blackhole.js` | Black hole video: lazy loading, parallax and scroll zoom |
 | `assets/js/main.js` | Loader, cursor, projects grid, case studies, lightbox, CV viewer, audio |
 | `assets/js/projects.js` | Project data |
 | `assets/img/` | Photos (one folder per project) |
+| `assets/media/bg-video.mp4`, `assets/bg-poster.jpg` | The black hole film and its first frame |
 | `assets/media/bg-audio.mp4` | Optional ambient sound (only plays when the visitor presses the sound button) |
 | `_headers` | Security and cache headers for **Cloudflare Pages** |
 | `.nojekyll` | Tells **GitHub Pages** to serve files as-is |
