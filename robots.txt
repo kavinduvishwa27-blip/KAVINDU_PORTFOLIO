@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kavinduvishwa27-blip.github.io/KAVINDU_PORTFOLIO/sitemap.xml

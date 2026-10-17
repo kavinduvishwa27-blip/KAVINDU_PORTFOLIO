@@ -1,0 +1,9 @@
+{
+  "name": "Kavindu Vishwa Godagampola — Portfolio",
+  "short_name": "KVG",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#030203",
+  "theme_color": "#030203",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
