@@ -177,8 +177,15 @@
     stage.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${s}) rotate(${rot}deg)`;
     if (W !== stage.clientWidth || H !== stage.clientHeight) resize();
     drawParticles(dt, t);
+    // self-heal: rapid pause/resume (CV redraws, modals) can abort a pending
+    // play(); if the film should be running but isn't, nudge it once a second
+    if (video.dataset.started && video.paused && !document.hidden && now - lastNudge > 1000) {
+      lastNudge = now;
+      video.play().catch(() => {});
+    }
     requestAnimationFrame(loop);
   }
+  let lastNudge = 0;
   if (!reduce) requestAnimationFrame(loop);
 
   document.addEventListener('visibilitychange', () => {

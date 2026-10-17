@@ -453,30 +453,63 @@
   }
   $('#copy-mail').addEventListener('click', async (e) => {
     const v = e.currentTarget.dataset.copy;
-    try { await navigator.clipboard.writeText(v); showToast('Email copied'); }
-    catch { location.href = 'mailto:' + v; }
+    // clipboard API can hang or be blocked (insecure origin, no focus): time-box it,
+    // then fall back to a hidden textarea + execCommand, and only then to mailto
+    const viaApi = () => Promise.race([
+      navigator.clipboard ? navigator.clipboard.writeText(v) : Promise.reject(),
+      new Promise((_, rej) => setTimeout(rej, 800))
+    ]);
+    const viaTextarea = () => {
+      const ta = document.createElement('textarea');
+      ta.value = v; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
+      document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, v.length);
+      const ok = document.execCommand && document.execCommand('copy');
+      ta.remove();
+      if (!ok) throw new Error('copy failed');
+    };
+    try { await viaApi(); showToast('Email copied'); }
+    catch {
+      try { viaTextarea(); showToast('Email copied'); }
+      catch { location.href = 'mailto:' + v; }
+    }
   });
 
   /* ---------------- Ambient audio ---------------- */
   const audio = $('#bg-audio'), aBtn = $('#audio-btn');
-  let fadeRaf;
-  function fadeTo(target, done) {
-    cancelAnimationFrame(fadeRaf);
-    (function step() {
-      const d = target - audio.volume;
-      if (Math.abs(d) < 0.02) { audio.volume = target; return done && done(); }
-      audio.volume = Math.max(0, Math.min(1, audio.volume + d * 0.08));
-      fadeRaf = requestAnimationFrame(step);
-    })();
+  // Time-boxed fade: iOS ignores writes to audio.volume, so never wait on it.
+  let fadeTimer;
+  function fade(from, to, ms, done) {
+    clearInterval(fadeTimer);
+    const start = performance.now();
+    try { audio.volume = from; } catch { /* read-only on iOS */ }
+    fadeTimer = setInterval(() => {
+      const p = Math.min(1, (performance.now() - start) / ms);
+      try { audio.volume = from + (to - from) * p; } catch { /* read-only on iOS */ }
+      if (p >= 1) { clearInterval(fadeTimer); done && done(); }
+    }, 30);
   }
-  aBtn.addEventListener('click', () => {
-    const on = !aBtn.classList.contains('on');
+  function syncAudioBtn() {
+    const on = !audio.paused;
     aBtn.classList.toggle('on', on);
     aBtn.setAttribute('aria-pressed', on);
     aBtn.setAttribute('aria-label', on ? 'Mute ambient sound' : 'Play ambient sound');
-    if (on) { audio.volume = 0; audio.play().then(() => fadeTo(0.45)).catch(() => {}); }
-    else fadeTo(0, () => audio.pause());
-    store.set('kvg-audio', on ? '1' : '0');
+  }
+  audio.addEventListener('play', () => { if (!wantOn) audio.pause(); else syncAudioBtn(); });
+  // the OS can pause us too (calls, other media): keep the button honest
+  audio.addEventListener('pause', () => { wantOn = false; syncAudioBtn(); });
+  let wantOn = false, stopTimer;
+  aBtn.addEventListener('click', () => {
+    wantOn = !wantOn;
+    clearTimeout(stopTimer);
+    if (wantOn) {
+      aBtn.classList.add('on');
+      audio.play().then(() => fade(0, 0.45, 900)).catch(() => { wantOn = false; syncAudioBtn(); });
+    } else {
+      aBtn.classList.remove('on');
+      fade(audio.volume, 0, 350, () => { if (!wantOn) audio.pause(); });
+      // belt and braces: pause even if the fade never finishes
+      stopTimer = setTimeout(() => { if (!wantOn && !audio.paused) audio.pause(); }, 450);
+    }
   });
 
   /* ---------------- CV viewer (pdf.js, loaded on demand) ---------------- */
@@ -507,44 +540,58 @@
       cvViewer.classList.add('failed');
     }
   }
+  let queuedPage = null, targetPage = 1;
   async function renderCV(n) {
-    if (!pdfDoc || rendering) return;
+    if (!pdfDoc) return;
+    n = Math.max(1, Math.min(pdfDoc.numPages, n));
+    targetPage = n;
+    // a page is already being drawn: remember the latest request and run it next
+    if (rendering) { queuedPage = n; return; }
     rendering = true;
     // give pdf.js the main thread while it rasterises the page
     window.VOID && window.VOID.pause();
-    cvPage = Math.max(1, Math.min(pdfDoc.numPages, n));
     const canvas = $('#cv-canvas');
-    canvas.classList.remove('ready');
-    const page = await pdfDoc.getPage(cvPage);
-    const stage = $('.cv-stage');
-    const avail = Math.min(stage.clientWidth - 32, document.fullscreenElement ? 1100 : 900);
-    const base = page.getViewport({ scale: 1 });
-    const cssScale = avail / base.width;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const vp = page.getViewport({ scale: cssScale * dpr });
-    canvas.width = vp.width; canvas.height = vp.height;
-    canvas.style.width = vp.width / dpr + 'px';
     try {
+      cvPage = n;
+      $('#cv-page').textContent = cvPage;
+      canvas.classList.remove('ready');
+      const page = await pdfDoc.getPage(cvPage);
+      const stage = $('.cv-stage');
+      const avail = Math.min(stage.clientWidth - 32, document.fullscreenElement ? 1100 : 900);
+      const base = page.getViewport({ scale: 1 });
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const vp = page.getViewport({ scale: (avail / base.width) * dpr });
+      canvas.width = vp.width; canvas.height = vp.height;
+      canvas.style.width = vp.width / dpr + 'px';
       await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
+      void canvas.offsetWidth;
+      canvas.classList.add('ready');
+    } catch (err) {
+      console.warn('CV page render failed', err);
     } finally {
+      rendering = false;
+      $('#cv-prev').disabled = cvPage <= 1;
+      $('#cv-next').disabled = cvPage >= pdfDoc.numPages;
       if (caseEl.hidden) window.VOID && window.VOID.resume();
+      if (queuedPage !== null) { const q = queuedPage; queuedPage = null; renderCV(q); }
     }
-    $('#cv-page').textContent = cvPage;
-    $('#cv-prev').disabled = cvPage <= 1;
-    $('#cv-next').disabled = cvPage >= pdfDoc.numPages;
-    void canvas.offsetWidth;
-    canvas.classList.add('ready');
-    rendering = false;
   }
-  $('#cv-prev').addEventListener('click', () => renderCV(cvPage - 1));
-  $('#cv-next').addEventListener('click', () => renderCV(cvPage + 1));
+  // step from the page the visitor asked for, even mid-render
+  $('#cv-prev').addEventListener('click', () => renderCV(targetPage - 1));
+  $('#cv-next').addEventListener('click', () => renderCV(targetPage + 1));
   $('#cv-full').addEventListener('click', () => {
     if (document.fullscreenElement) document.exitFullscreen();
     else if (cvViewer.requestFullscreen) cvViewer.requestFullscreen().catch(() => window.open(PDF_URL, '_blank'));
     else window.open(PDF_URL, '_blank');
   });
-  document.addEventListener('fullscreenchange', () => setTimeout(() => renderCV(cvPage), 120));
-  let rT; addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(() => pdfDoc && renderCV(cvPage), 250); });
+  document.addEventListener('fullscreenchange', () => setTimeout(() => renderCV(targetPage), 120));
+  // phones fire "resize" whenever the address bar slides; only redraw on a real width change
+  let rT, lastW = innerWidth;
+  addEventListener('resize', () => {
+    if (innerWidth === lastW) return;
+    lastW = innerWidth;
+    clearTimeout(rT); rT = setTimeout(() => pdfDoc && renderCV(targetPage), 250);
+  });
   const cvIO = new IntersectionObserver((en) => {
     if (en[0].isIntersecting) { cvIO.disconnect(); initCV(); }
   }, { rootMargin: '600px 0px' });
