@@ -64,7 +64,10 @@
 
 <!-- ============ THE VOID (original black hole film) ============ -->
 <div class="void-wrap" aria-hidden="true">
-  <video id="void" muted loop playsinline preload="none" poster="assets/bg-poster.jpg" data-src="assets/media/bg-video.mp4"></video>
+  <div class="void-stage" id="void-stage">
+    <video id="void" muted loop playsinline preload="none" poster="assets/bg-poster.jpg" data-src="assets/media/bg-video.mp4"></video>
+    <canvas id="void-fx"></canvas>
+  </div>
 </div>
 <div class="veil" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
